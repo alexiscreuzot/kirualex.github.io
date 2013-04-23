@@ -9,28 +9,28 @@
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/flat-ui.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
-	<!-- Script -->	
+	<!-- Script -->
 
 </head>
-<body>	
-	<div id="top-line"></div>
+<body ng-controller="AppController" ng-class="{isHome: routeIs('/')}">
 
+    <div id="top-line"></div>
 
-  <header>
-   <h1>Alexis <span>Creuzot</span></h1>       
-   <ul class="menu" ng-controller="NavbarController">
-     <li class="turquoise" ng-class="{active: routeIs('/resume')}" ><a href="/resume">Resume</a></li>
-     <li class="amethyst" ng-class="{active: routeIs('/thoughts')}"><a href="/thoughts">Thoughts</a></li>
-     <li class="alizarin" ng-class="{active: routeIs('/lab')}"><a href="/lab">Lab</a></li>
+    <header>
+     <h1>Alexis <span>Creuzot</span></h1>
+     <ul class="menu">
+       <li ng-class="{active: routeIs('/resume')}" ><a href="/resume">Resume</a></li>
+       <li ng-class="{active: routeIs('/thoughts')}"><a href="/thoughts">Thoughts</a></li>
+       <li ng-class="{active: routeIs('/lab')}"><a href="/lab">Lab</a></li>
    </ul>
- </header>
+</header>
 
- <div class="container" data-ng-view></div>
+<div class="container" data-ng-view></div>
 
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
- <script src="js/app.js"></script>
- <script src="js/MyController.js"></script>
- <script src="js/NavbarController.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/MyController.js"></script>
+<script src="js/AppController.js"></script>
 </body>
 </html>
 <!-- Localized -->
