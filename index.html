@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+	<title>Alexis Creuzot</title>
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/flat-ui.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+	<!-- Script -->	
+
+</head>
+<body >	
+	<div id="top-line"></div>
+  <div class="container">
+    <div id="box">
+     <h1>Alexis <span>Creuzot</span></h1>				
+     <ul class="menu">
+       <li class="turquoise"><a href="/">Resume</a></li>
+       <li class="amethyst"><a href="/view2">Thoughts</a></li>
+       <li class="alizarin"><a href="/view3">Lab</a></li>
+     </ul>
+    </div>
+
+    <div>
+      <input type="text" data-ng-model="name"/><br>
+      <h1>{{name}}</h1>
+      <!-- placeholder -->
+      <div data-ng-view></div>
+    </div>
+
+  </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+<script> 
+var myApp = angular.module('myApp', []);
+
+// routes
+myApp.config(function ($routeProvider,$locationProvider){
+  $locationProvider.html5Mode(true);
+  $routeProvider
+  .when('/',{
+    controller:'SimpleController',
+    templateUrl:'partials/view1.html'
+  })
+  .when('/view2',{
+    controller:'SimpleController',
+    templateUrl:'partials/view2.html'
+  })
+  .otherwise({redirectTo:'/'});
+});
+
+// define controllers
+var controllers = {};
+controllers.SimpleController = function($scope){
+  $scope.names = ['one','two','three'];
+  $scope.names2 = ['blob','blib','rap'];
+};
+
+// declare controller to myApp
+myApp.controller(controllers);
+</script>
+
+</body>
+</html>
+<!-- Localized -->
