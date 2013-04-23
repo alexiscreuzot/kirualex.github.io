@@ -32,27 +32,26 @@ a:hover {
 	background-color: #3498DB;	
 }
 /*-------------------------------------------------*\
-* Box
+* header
 \*-------------------------------------------------*/
 
-#box {
+header {
 	padding: 10%;
 	text-align: center;
 }
 
-#box h1 {
+header h1 {
 	font-size: 60px;
 	color: #fff;
 	margin: 30px 0 50px;
 	font-weight: 200;
 }
-#box h1 span {
+header h1 span {
 	color: #3498DB;
 }
 
-/*-------------------------------------------------*\
-* Menu
-\*-------------------------------------------------*/
+/*---------- Menu ------------*/
+
 .menu,
 .menu ul{
 	padding:0;
@@ -69,24 +68,23 @@ a:hover {
 	padding: 16px 40px;
 	font-size: 14px;
 	text-transform: uppercase;	
-
-	-webkit-transition: all 0.3s ease-in 0s;
-	-moz-transition: all 0.3s ease-in 0s;
-	-o-transition: all 0.3s ease-in 0s;
-	transition: all 0.3s ease-in 0s;
 }
 
-.menu li.turquoise :hover {
+.menu li.turquoise :hover,
+.menu li.turquoise.active a  {
 	background-color: #1ABC9C;
 }
 
-.menu li.amethyst :hover {
+.menu li.amethyst :hover,
+.menu li.amethyst.active a {
 	background-color: #9B59B6;
 }
 
-.menu li.alizarin :hover {
+.menu li.alizarin :hover,
+.menu li.alizarin.active a {
 	background-color: #E74C3C;
 }
+
 
 
 

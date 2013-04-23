@@ -12,57 +12,25 @@
 	<!-- Script -->	
 
 </head>
-<body >	
+<body>	
 	<div id="top-line"></div>
-  <div class="container">
-    <div id="box">
-     <h1>Alexis <span>Creuzot</span></h1>				
-     <ul class="menu">
-       <li class="turquoise"><a href="/">Resume</a></li>
-       <li class="amethyst"><a href="/view2">Thoughts</a></li>
-       <li class="alizarin"><a href="/view3">Lab</a></li>
-     </ul>
-    </div>
 
-    <div>
-      <input type="text" data-ng-model="name"/><br>
-      <h1>{{name}}</h1>
-      <!-- placeholder -->
-      <div data-ng-view></div>
-    </div>
 
-  </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+  <header>
+   <h1>Alexis <span>Creuzot</span></h1>       
+   <ul class="menu" ng-controller="NavbarController">
+     <li class="turquoise" ng-class="{active: routeIs('/resume')}" ><a href="/resume">Resume</a></li>
+     <li class="amethyst" ng-class="{active: routeIs('/thoughts')}"><a href="/thoughts">Thoughts</a></li>
+     <li class="alizarin" ng-class="{active: routeIs('/lab')}"><a href="/lab">Lab</a></li>
+   </ul>
+ </header>
 
-<script> 
-var myApp = angular.module('myApp', []);
+ <div class="container" data-ng-view></div>
 
-// routes
-myApp.config(function ($routeProvider,$locationProvider){
-  $locationProvider.html5Mode(true);
-  $routeProvider
-  .when('/',{
-    controller:'SimpleController',
-    templateUrl:'partials/view1.html'
-  })
-  .when('/view2',{
-    controller:'SimpleController',
-    templateUrl:'partials/view2.html'
-  })
-  .otherwise({redirectTo:'/'});
-});
-
-// define controllers
-var controllers = {};
-controllers.SimpleController = function($scope){
-  $scope.names = ['one','two','three'];
-  $scope.names2 = ['blob','blib','rap'];
-};
-
-// declare controller to myApp
-myApp.controller(controllers);
-</script>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+ <script src="js/app.js"></script>
+ <script src="js/MyController.js"></script>
+ <script src="js/NavbarController.js"></script>
 </body>
 </html>
 <!-- Localized -->
