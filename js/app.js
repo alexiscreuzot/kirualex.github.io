@@ -6,7 +6,7 @@ var myApp = angular.module('myApp', []);
 myApp.config(function ($routeProvider,$locationProvider){
   $locationProvider.html5Mode(true);
   $routeProvider
-  .when('/resume',{
+  .when('/skills',{
     controller:'MyController',
     templateUrl:'partials/view1.html'
   })
