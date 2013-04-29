@@ -16,10 +16,10 @@
 
     <div id="top-line"></div>
 
-    <div id="holder" style="margin:auto; width:620px"></div>
-
     <header>
      <h1>Alexis <span>Creuzot</span></h1>
+     <div id="holder" style="margin:20px auto 40px; width:420px";></div>
+
      <ul class="menu">
        <li ng-class="{active: routeIs('/skills')}" ><a href="/skills">Skills</a></li>
        <li ng-class="{active: routeIs('/thoughts')}"><a href="/thoughts">Thoughts</a></li>
@@ -29,7 +29,8 @@
 
 <div class="container" data-ng-view></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/MyController.js"></script>
 <script src="js/AppController.js"></script>
@@ -39,45 +40,41 @@
         <script>
             Raphael(function () {
 
-                var w = 620;
+                var w = $('#holder').width();
+                var r = Raphael("holder", w, 20);
+                var bg = r.path();
 
-                var r = Raphael("holder", w, 25),
-                    clr = [],
-                    values = [],
-                    bg = r.path("M0,0").attr({stroke: "none", opacity: 1}),
-                    dotsy = [];
+                function randomPath() {
 
-                function randomPath(length) {
+                    var length = Math.round(w/6);
                     var path = "";
                     var   x = 0;
                     var   y = 0;
 
                     for (var i = 0; i < length; i++) {
-                        dotsy[i] = Math.round(Math.random() * 10);
-                    
+                        curY = Math.round(Math.random() * 20);
+
                         if(i==0){
-                            path += "M0,0";
+                            path += "M0,20";
                         }else if(i==(length -1)){
-                            path += ","+w+",0Z";
+                            path += ","+w+",20";
                         }else{
-                            x += w/length;
-                            y = dotsy[i];
+                            x += Math.round(w/length);
+                            y = curY;
                             path += "," + [x, y];
                         }
                     }
                     return path;
                 }
 
-                values = randomPath(40);
-                bg.attr({path:values , fill: "#2980B9"});
+                bg.attr({path:randomPath(),fill:"#2980B9", stroke: "2px", opacity: 1});
 
                 var animation = function () {
-                    values = randomPath(40);
-                    var anim = Raphael.animation({path: values}, 2000, "linear");
+                    var anim = Raphael.animation({path: randomPath()}, 1000, "linear");
                     bg.animate(anim);
                 };
                 animation();
-                setInterval(function(){animation()}, 2000);
+                setInterval(function(){animation()}, 1000);
 
             });
         </script>
