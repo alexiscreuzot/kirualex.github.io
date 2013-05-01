@@ -4,8 +4,8 @@
 * General
 \*-------------------------------------------------*/
 body{
-	background: #eaedf1;
-	color: #202226;
+	background: #2C3E50;
+	color: #ECF0F1;
 	font-size:12px;
 	line-height:1.4;
 	font: 14px/1.231 'Titillium Web', sans-serif;
@@ -13,49 +13,33 @@ body{
 	padding:0;
 }
 
-a{
-	color: #ECF0F1;
-	text-decoration: none;
-}
+a,
 a:hover {
 	color: #ECF0F1;
 	text-decoration: none;
 }
 
 /*-------------------------------------------------*\
-* topline
-\*-------------------------------------------------*/
-
-#top-line {
-	width: 100%;
-	height: 6px;
-	background-color: #2980B9;
-}
-/*-------------------------------------------------*\
 * header
 \*-------------------------------------------------*/
 
 header {
-	padding-top: 10px;
+	background-color: #34495E;
+	padding: 14px 0;
+	border-bottom: 2px solid #44596E;
 	text-align: center;
-
-	-webkit-transition: 0.5s ease-in-out;
-	-moz-transition: 0.5s ease-in-out;
-	-o-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
 }
 
 .isHome header {
-	padding-top: 180px;
 }
 
 header h1 {
-	font-size: 60px;
-	color: #202226;
-	font-weight: 200;
+	font-size: 40px;
+	font-weight: 400;
+	text-shadow: 0px 2px #333;
 }
 header h1 span {
-	color: #2980B9;
+	color: #2ECC71;
 }
 
 /*---------- Menu ------------*/
@@ -67,22 +51,27 @@ header h1 span {
 }
 
 .menu li {
-	padding:0 15px;
+	padding:0 20px;
 	display: inline;
 }
 
 .menu li a {
-	color:#202226;
-	border-bottom: 1px solid #202226;
-	padding: 15px 40px;
+	text-shadow: 0px 1px #333;
+	color:#BDC3C7;
+	border-bottom: 2px solid #44596E;
+	padding: 14px 10px;
 	font-size: 14px;
 	text-transform: uppercase;
 }
 
 .menu li:hover a,
 .menu li.active a  {
-	color:#ECF0F1;
-	background-color: #323a45;
+	color:#2ECC71;
+	border-bottom: 2px solid #2ECC71;
 }
 
+/*---------- Container ------------*/
 
+.container{
+
+}
