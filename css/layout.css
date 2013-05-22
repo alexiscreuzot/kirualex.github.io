@@ -21,12 +21,23 @@ p{
 }
 
 a:link {
-	color: #2ECC71;
+	color: #1ABC9C;
 	text-decoration: none;
+	font-weight: 300;
 }
 
 a:hover,
 a:active {
 	text-decoration: none;
-	color: #27AE60;
+	color:#48c9b0;
+}
+
+/* Toolbar */
+.btn-toolbar{
+	margin:10px;
+}
+
+.btn-toolbar a.btn
+{
+	color: #ECF0F1;
 }
