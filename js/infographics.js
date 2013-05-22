@@ -29,7 +29,7 @@ Raphael(function () {
         return path;
     }
 
-    bg.attr({path:randomPath(), stroke:'#ECF0F1', opacity: 1, fill:"#2C3E50"});
+    bg.attr({path:randomPath(), stroke:'#ECF0F1', opacity: 0.3, fill:"#FFF"});
 
     var animation = function () {
         var anim = Raphael.animation({path: randomPath()}, 1000, "linear");

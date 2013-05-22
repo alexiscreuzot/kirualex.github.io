@@ -1,77 +1,32 @@
-@import url("http://fonts.googleapis.com/css?family=Titillium+Web:400,200,600");
-
-/*-------------------------------------------------*\
-* General
-\*-------------------------------------------------*/
-body{
-	background: #2C3E50;
-	color: #ECF0F1;
-	font-size:12px;
-	line-height:1.4;
-	font: 14px/1.231 'Titillium Web', sans-serif;
-	margin:0;
-	padding:0;
+body {
+	font-family:'Lato', sans-serif;
+	background:#2C3E50;
+	color:#ECF0F1;
 }
 
-a,
-a:hover {
-	color: #ECF0F1;
+h1 {
+	font-size:50px;
+	font-weight: 300;
+	margin:50px 0;
+}
+
+p{
+	font-size:22px;
+	font-weight: 200;
+}
+
+.container{
+	margin-top: 100px;
+	width: 850px;
+}
+
+a:link {
+	color: #2ECC71;
 	text-decoration: none;
 }
 
-/*-------------------------------------------------*\
-* header
-\*-------------------------------------------------*/
-
-header {
-	background-color: #34495E;
-	padding: 14px 0;
-	border-bottom: 2px solid #44596E;
-	text-align: center;
-}
-
-.isHome header {
-}
-
-header h1 {
-	font-size: 40px;
-	font-weight: 400;
-	text-shadow: 0px 2px #333;
-}
-header h1 span {
-	color: #2ECC71;
-}
-
-/*---------- Menu ------------*/
-
-.menu,
-.menu ul{
-	padding:0;
-	margin:0;
-}
-
-.menu li {
-	padding:0 20px;
-	display: inline;
-}
-
-.menu li a {
-	text-shadow: 0px 1px #333;
-	color:#BDC3C7;
-	border-bottom: 2px solid #44596E;
-	padding: 14px 10px;
-	font-size: 14px;
-	text-transform: uppercase;
-}
-
-.menu li:hover a,
-.menu li.active a  {
-	color:#2ECC71;
-	border-bottom: 2px solid #2ECC71;
-}
-
-/*---------- Container ------------*/
-
-.container{
-
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #27AE60;
 }
