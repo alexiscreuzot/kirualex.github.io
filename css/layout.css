@@ -103,7 +103,11 @@ input[type="color"],
 
 .btn-toolbar a.btn
 {
+	padding: 11px 18px 6px;
 	color: #ECF0F1;
+}
+
+.btn-toolbar a.btn i.icon-large{
 }
 
 /* Content */
@@ -125,6 +129,7 @@ input[type="color"],
 }
 
 /* Articles */
+
 .article .separator {
 	width: 20px;
 	margin:40px auto;
