@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
 
 </head>
-<body>
+<body ng-controller="AppController">
 
   <div class="btn-toolbar">
     <div class="btn-group">
-      <a class="btn btn-primary" ng-class="{active: routeIs('')}" href="/"><i class="fui-user"></i></a>
+      <a class="btn btn-primary" ng-class="{active: routeIs('/')}" href="/"><i class="fui-user"></i></a>
       <a class="btn btn-primary" ng-class="{active: routeIs('/lab')}" href="/lab"><i class="fui-gear"></i></a>
       <a class="btn btn-primary" ng-class="{active: routeIs('/thoughts')}" href="/thoughts"><i class="fui-heart"></i></a>
       <a class="btn btn-primary" ng-class="{active: routeIs('/contact')}" href="/contact"><i class="fui-chat"></i></a>
@@ -38,8 +38,8 @@
    <script src="js/jquery-1.6.2.min.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
    <script src="js/app.js"></script>
-   <script src="js/MyController.js"></script>
    <script src="js/AppController.js"></script>
+   <script src="js/MyController.js"></script>
    <script src="js/focus.min.js"></script>
 
 

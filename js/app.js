@@ -19,4 +19,5 @@ myApp.config(function ($routeProvider,$locationProvider){
     templateUrl:'partials/me.html'
   })
   .otherwise({redirectTo:'/'});
+
 });
