@@ -1,6 +1,13 @@
-<h1 ng-class="{displayed: true}">Here's my lab. Don't break anything.</h1>
+<h1 ng-class="{displayed: true}">/lab</h1>
 <div class="content" ng-class="{displayed: true}">
+
+<h2>Libraries</h2>
 <ul>
-	<li data-ng-repeat="name in names">{{name}}</li>
+	<li data-ng-repeat="lib in libraries"><a href="{{lib.url}}" target="_blank">{{lib.name}}</a><br/>{{lib.description}}</li>
+</ul>
+
+<h2>Projects</h2>
+<ul>
+	<li data-ng-repeat="proj in projects"><a href="{{proj.url}}" target="_blank">{{proj.name}}</a><br/>{{proj.description}}</li>
 </ul>
 </div>

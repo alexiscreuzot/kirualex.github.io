@@ -4,28 +4,55 @@ body {
 	color:#ECF0F1;
 }
 
+.hidden{
+	display: none;
+}
+
 /* ---------------------------------- *\
  			Typography
 \* ---------------------------------- */
 
+::-moz-selection {
+    background-color: #2C3E50;
+}
+
+::selection {
+    background-color: #2C3E50;
+}
+
 h1{
 	font-size:50px;
 	font-weight: 300;
-	margin:50px 0 50px -20px;
+	margin-top:30px;
+	margin-bottom:50px;
+	margin-left:-10px;
 	-webkit-transition: all .3s ease-out;
 	opacity:0;
 }
 
 h1.displayed{
-	margin:50px 0 50px 0px;
+	margin-left:0;
 	opacity:1;
 }
 
-p{
-	font-size:22px;
-	font-weight: 200;
+h2{
+	font-size:20px;
+	font-weight: 500;
 }
 
+h3{
+	font-size:20px;
+	font-weight: 500;
+	color:#BDC3C7;
+}
+
+li,p{
+	font-size:22px;
+	font-weight: 200;
+	line-height: 1.5;
+}
+
+a,
 a:link {
 	color: #1ABC9C;
 	text-decoration: none;
@@ -83,13 +110,26 @@ input[type="color"],
 
 .container{
 	max-width: 850px;
+	margin-bottom: 50px;
 }
 
 .content{
-opacity:0;
-	-webkit-transition: all .5s ease-out;
+	opacity:0;
+	margin-left:10px;
+	-webkit-transition: all .3s ease-out ;
 }
 
 .content.displayed{
 	opacity:1;
+	margin-left:0;
 }
+
+/* Articles */
+.article .separator {
+	width: 20px;
+	margin:40px auto;
+}
+.article .separator span{
+	color:#1ABC9C;
+}
+

@@ -1,8 +1,5 @@
-Raphael(function () {
-
-    var w = $('#holder').width();
-    var h = $('#holder').height();
-    var r = Raphael("holder", w, h);
+var draw = function (w,h,r) {
+    
     var padding = 5;
     var bg = r.path();
 
@@ -17,9 +14,9 @@ Raphael(function () {
             curY = Math.round(Math.random() * (h-padding));
 
             if(i==0){
-                path += "M0,"+h;
+                path += "M0,"+Math.round(h/2);
             }else if(i==(length -1)){
-                path += ","+w+","+h;
+                path += ","+w+","+Math.round(h/2);
             }else{
                 x += Math.round(w/length);
                 y = curY;
@@ -29,12 +26,17 @@ Raphael(function () {
         return path;
     }
 
-    bg.attr({path:randomPath(), stroke:'#ECF0F1', opacity: 0.3, fill:"#FFF"});
+    bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"#2C3E50"});
 
     var animation = function () {
-        var anim = Raphael.animation({path: randomPath()}, 1000, "linear");
+        var anim = Raphael.animation({path: randomPath()}, 0.2, "linear");
         bg.animate(anim);
+        //bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"#2C3E50"});
     };
-    animation();
-    setInterval(function(){animation()}, 1000);
-});
+    return animation;
+    
+};
+var w = $('#holder').width();
+var h = $('#holder').height();
+var r = Raphael("holder", w, h);
+var graphy = draw(w,h,r);
