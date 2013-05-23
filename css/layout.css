@@ -16,7 +16,7 @@ p{
 }
 
 .container{
-	width: 850px;
+	max-width: 850px;
 }
 
 a:link {
