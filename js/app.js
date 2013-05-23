@@ -4,7 +4,7 @@ var myApp = angular.module('myApp', []);
 
 // routes
 myApp.config(function ($routeProvider,$locationProvider){
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
   $routeProvider
   .when('/lab',{
     controller:'MyController',

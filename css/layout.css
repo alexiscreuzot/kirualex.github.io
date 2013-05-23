@@ -13,11 +13,11 @@ body {
 \* ---------------------------------- */
 
 ::-moz-selection {
-    background-color: #2C3E50;
+    background-color: rgba(0,0,0,0.15);
 }
 
 ::selection {
-    background-color: #2C3E50;
+    background-color: rgba(0,0,0,0.15);
 }
 
 h1{
