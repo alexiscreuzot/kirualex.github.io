@@ -6,13 +6,17 @@ var myApp = angular.module('myApp', []);
 myApp.config(function ($routeProvider,$locationProvider){
   $locationProvider.html5Mode(true);
   $routeProvider
-  .when('/skills',{
+  .when('/lab',{
     controller:'MyController',
-    templateUrl:'partials/view1.html'
+    templateUrl:'partials/lab.html'
   })
   .when('/thoughts',{
     controller:'MyController',
-    templateUrl:'partials/view2.html'
+    templateUrl:'partials/thoughts.html'
+  })
+  .when('/',{
+    controller:'MyController',
+    templateUrl:'partials/me.html'
   })
   .otherwise({redirectTo:'/'});
 });

@@ -6,36 +6,42 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<!-- Stylesheet -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/flat-ui.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/flat-ui.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
 
 </head>
 <body>
 
-    <div class="btn-toolbar">
-        <div class="btn-group">
-          <a class="btn btn-primary active" href="#fakelink"><i class="fui-user"></i></a>
-          <a class="btn btn-primary" href="#fakelink"><i class="fui-gear"></i></a>
-          <a class="btn btn-primary" href="#fakelink"><i class="fui-heart"></i></a>
-          <a class="btn btn-primary" href="#fakelink"><i class="fui-chat"></i></a>
-      </div>
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <a class="btn btn-primary" ng-class="{active: routeIs('')}" href="/"><i class="fui-user"></i></a>
+      <a class="btn btn-primary" ng-class="{active: routeIs('/lab')}" href="/lab"><i class="fui-gear"></i></a>
+      <a class="btn btn-primary" ng-class="{active: routeIs('/thoughts')}" href="/thoughts"><i class="fui-heart"></i></a>
+      <a class="btn btn-primary" ng-class="{active: routeIs('/contact')}" href="/contact"><i class="fui-chat"></i></a>
+    </div>
   </div>
 
-  <div class="container">
+  <div class="container" data-ng-view>
+
     <h1>Hey. I'm Alexis</h1>
 
     <p>I experiment new ideas <a href="https://github.com/kirualex" target="_blank">on Github</a>. I help and get helped on <a href="http://stackoverflow.com/users/421786/kirualex" target="_blank">Stack Overflow</a>.<br/> I scout for great start-up stories <a href="https://news.ycombinator.com/news" target="_blank">on Hacker News</a>.<br/>
      You'll probably find me doing all this with my earbuds on, listening to some sweet tunes on <a href="http://grooveshark.com/#!/kirualex" target="_blank">Grooveshark</a>.
      <br/><br/>
      You can <a href="mailto:alexis.creuzot@gmail.com" target="_blank">drop me an email</a>.</p>
- </div>
+   </div>
 
- <script src="js/jquery-1.6.2.min.js"></script>
- <script src="js/focus.min.js"></script>
- 
 
-</body>
-</html>
+   <script src="js/jquery-1.6.2.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/MyController.js"></script>
+   <script src="js/AppController.js"></script>
+   <script src="js/focus.min.js"></script>
+
+
+ </body>
+ </html>
 <!-- Localized -->
