@@ -1,4 +1,8 @@
+html,
 body {
+	margin:0;
+    padding:0;
+    height:95%;
 	font-family:'Lato', sans-serif;
 	background:#2C3E50;
 	color:#ECF0F1;
@@ -66,66 +70,59 @@ a:active {
 }
 
 /* ---------------------------------- *\
- 			Typography
-\* ---------------------------------- */
-
-
-textarea,
-input[type="text"],
-input[type="password"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="date"], 
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="number"], 
-input[type="email"], 
-input[type="url"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="color"], 
-.uneditable-input{
-	background: #34495E;
-	color:#ECF0F1;
-}
-
-/* ---------------------------------- *\
  			Layout
 \* ---------------------------------- */
 
-/* Menu */
+#page{
+	min-height: 100%;
+	position: relative;
+}
 
-.btn-toolbar{
+/* Header */
+
+#header .btn-toolbar{
 	width:200px;
 	margin:50px auto;
 }
 
-.btn-toolbar a.btn
+#header .btn-toolbar a.btn
 {
 	padding: 11px 18px 6px;
 	color: #ECF0F1;
 }
 
-.btn-toolbar a.btn i.icon-large{
+#header .btn-toolbar a.btn i.icon-large{
 }
 
-/* Content */
+/* Main */
 
-.container{
+#main{
+	padding-bottom: 100px;
+}
+
+#main .container{
 	max-width: 850px;
-	margin-bottom: 50px;
 }
 
-.content{
+#main .content{
 	opacity:0;
 	margin-left:10px;
 	-webkit-transition: all .3s ease-out ;
 }
 
-.content.displayed{
+#main .content.displayed{
 	opacity:1;
 	margin-left:0;
+}
+
+/* Footer */
+
+#footer
+{
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom: 0;
 }
 
 /* Articles */
