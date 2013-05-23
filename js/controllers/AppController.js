@@ -9,7 +9,7 @@ myApp.controller('AppController', function($scope, $location) {
 $scope.menus =
 [{link:"", icon:"user"},
 {link:"lab", icon:"beaker"},
-{link:"thoughts", icon:"bookmark"},
+{link:"scribbles", icon:"bookmark"},
 {link:"contact", icon:"envelope-alt"}];
 
 });
