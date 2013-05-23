@@ -4,19 +4,26 @@ body {
 	color:#ECF0F1;
 }
 
-h1 {
+/* ---------------------------------- *\
+ 			Typography
+\* ---------------------------------- */
+
+h1{
 	font-size:50px;
 	font-weight: 300;
-	margin:50px 0 50px;
+	margin:50px 0 50px -20px;
+	-webkit-transition: all .3s ease-out;
+	opacity:0;
+}
+
+h1.displayed{
+	margin:50px 0 50px 0px;
+	opacity:1;
 }
 
 p{
 	font-size:22px;
 	font-weight: 200;
-}
-
-.container{
-	max-width: 850px;
 }
 
 a:link {
@@ -31,7 +38,37 @@ a:active {
 	color:#48c9b0;
 }
 
-/* Toolbar */
+/* ---------------------------------- *\
+ 			Typography
+\* ---------------------------------- */
+
+
+textarea,
+input[type="text"],
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input{
+	background: #34495E;
+	color:#ECF0F1;
+}
+
+/* ---------------------------------- *\
+ 			Layout
+\* ---------------------------------- */
+
+/* Menu */
+
 .btn-toolbar{
 	width:200px;
 	margin:50px auto;
@@ -40,4 +77,19 @@ a:active {
 .btn-toolbar a.btn
 {
 	color: #ECF0F1;
+}
+
+/* Content */
+
+.container{
+	max-width: 850px;
+}
+
+.content{
+opacity:0;
+	-webkit-transition: all .5s ease-out;
+}
+
+.content.displayed{
+	opacity:1;
 }

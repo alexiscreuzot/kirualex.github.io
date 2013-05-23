@@ -14,10 +14,13 @@ myApp.config(function ($routeProvider,$locationProvider){
     controller:'MyController',
     templateUrl:'partials/thoughts.html'
   })
+  .when('/contact',{
+    controller:'MyController',
+    templateUrl:'partials/contact.html'
+  })
   .when('/',{
     controller:'MyController',
     templateUrl:'partials/me.html'
   })
   .otherwise({redirectTo:'/'});
-
 });
