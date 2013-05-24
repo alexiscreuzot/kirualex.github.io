@@ -8,6 +8,18 @@ body {
 	color:#ECF0F1;
 }
 
+#topline{
+	width: 100%;
+	height: 5px;
+	background:#2C3E50;
+	-webkit-transition: background 0.5s linear;
+}
+
+#topline.admin
+{
+	background:#48c9b0;
+}
+
 .hidden{
 	display: none;
 }

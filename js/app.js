@@ -17,6 +17,9 @@ myApp.config(function ($routeProvider,$locationProvider){
   .when('/contact',{
     templateUrl:'partials/contact.html'
   })
+  .when('/admin',{
+    templateUrl:'partials/admin.html'
+  })
   .when('/',{
     templateUrl:'partials/me.html'
   })
