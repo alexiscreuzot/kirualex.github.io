@@ -1,11 +1,17 @@
+@bg: #242222;
+@white: #ECF0F1;
+@color: #1ABC9C;
+
+.myColor { color: @color; }
+
 html,
 body {
 	margin:0;
     padding:0;
     height:95%;
 	font-family:'Lato', sans-serif;
-	background: url("../images/shattered.png") #242222;
-	color:#ECF0F1;
+	background: url("../images/shattered.png") @bg;
+	color:@white;
 }
 
 #topline{
@@ -17,11 +23,31 @@ body {
 
 #topline.admin
 {
-	background:#48c9b0;
+	background:lighten(@color,10%);
 }
 
 .hidden{
 	display: none;
+}
+
+/* ---------------------------------- *\
+ 			Buttons
+\* ---------------------------------- */
+
+.btn.btn-primary
+{
+	background-color: @color;
+}
+
+.btn.btn-primary.active,
+.btn.btn-primary.active:hover
+{
+	background-color: darken(@color,8%);
+}
+
+.btn.btn-primary:hover
+{
+	background-color: lighten(@color,10%);
 }
 
 /* ---------------------------------- *\
@@ -56,12 +82,6 @@ h2{
 	font-weight: 500;
 }
 
-h3{
-	font-size:20px;
-	font-weight: 500;
-	color:#BDC3C7;
-}
-
 li,p{
 	font-size:20px;
 	font-weight: 200;
@@ -70,7 +90,7 @@ li,p{
 
 a,
 a:link {
-	color: #1ABC9C;
+	color: @color;
 	text-decoration: none;
 	font-weight: 300;
 }
@@ -78,20 +98,7 @@ a:link {
 a:hover,
 a:active {
 	text-decoration: none;
-	color:#48c9b0;
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
-h1{
-	font-size:44px;
-	margin-top:20px;
-	margin-bottom:30px;
-}
-li,p{
-	font-weight: 300;
-}
+	color:lighten(@color, 15%);
 }
 
 /* ---------------------------------- *\
@@ -113,7 +120,7 @@ li,p{
 #header .btn-toolbar a.btn
 {
 	padding: 11px 18px 6px;
-	color: #ECF0F1;
+	color: @white;
 }
 
 #header .btn-toolbar a.btn i.icon-large{
@@ -158,6 +165,22 @@ li,p{
 	margin:40px auto;
 }
 .article .separator span{
-	color:#1ABC9C;
+	color:@color;
 }
 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+h1{
+	font-size:44px;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+li,p{
+	font-size:18px;
+	font-weight: 300;
+}
+#header .btn-toolbar{
+	margin:30px auto;
+}
+}

@@ -1,3 +1,9 @@
+var getLessVar = function (name, prop) {
+  var value = $('<div class="' + name + '"></div>').hide().appendTo('body').css(prop)
+  $('.' + name).remove()
+  return /^\d+/.test(value) ? +value : value
+}
+
 var draw = function (w,h,r) {
 
     var padding = 5;
@@ -26,7 +32,7 @@ var draw = function (w,h,r) {
         return path;
     }
 
-    bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"none"});
+    bg.attr({path:randomPath(), stroke:getLessVar('myColor', 'color'), opacity: 1, fill:"none"});
 
     var animation = function () {
         var anim = Raphael.animation({path: randomPath()}, 0.2, "linear");
@@ -39,4 +45,6 @@ var draw = function (w,h,r) {
 var w = $('#holder').width();
 var h = $('#holder').height();
 var r = Raphael("holder", w, h);
+less.refresh();
+console.log(getLessVar('myColor', 'color'));
 var graphy = draw(w,h,r);
