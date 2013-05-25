@@ -4,7 +4,7 @@ body {
     padding:0;
     height:95%;
 	font-family:'Lato', sans-serif;
-	background: url("../images/shattered.png") #2C3E50;
+	background: url("../images/shattered.png") #242222;
 	color:#ECF0F1;
 }
 
@@ -66,6 +66,13 @@ li,p{
 	font-size:20px;
 	font-weight: 200;
 	line-height: 1.5;
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+li,p{
+	font-weight: 300;
+}
 }
 
 a,
