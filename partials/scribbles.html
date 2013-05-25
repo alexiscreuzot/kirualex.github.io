@@ -1,9 +1,9 @@
 <h1 ng-class="{displayed: true}">/thoughts</h1>
 <div class="content" ng-class="{displayed: true}">
-<div class="article" data-ng-repeat="babble in scribbles">
-	<h2>{{babble.title}}</h2>
-	<p>{{babble.content}}</p>
-	<small>{{babble.date}}</small>
-	<div class="separator" ng-class="{hidden: $last}"><span class="fui-radio-unchecked"></span></div>
-</div>
+    <div class="article" data-ng-repeat="babble in scribbles">
+       <h2>{{babble.title}}</h2>
+       <p>{{babble.content}}</p>
+       <small>{{babble.date}}</small>
+       <div class="separator" ng-class="{hidden: $last}"><span class="fui-radio-unchecked"></span></div>
+   </div>
 </div>

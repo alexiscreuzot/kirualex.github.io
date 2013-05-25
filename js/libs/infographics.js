@@ -1,5 +1,5 @@
 var draw = function (w,h,r) {
-    
+
     var padding = 5;
     var bg = r.path();
 
@@ -26,7 +26,7 @@ var draw = function (w,h,r) {
         return path;
     }
 
-    bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"#2C3E50"});
+    bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"none"});
 
     var animation = function () {
         var anim = Raphael.animation({path: randomPath()}, 0.2, "linear");
@@ -34,7 +34,7 @@ var draw = function (w,h,r) {
         //bg.attr({path:randomPath(), stroke:'#48c9b0', opacity: 1, fill:"#2C3E50"});
     };
     return animation;
-    
+
 };
 var w = $('#holder').width();
 var h = $('#holder').height();

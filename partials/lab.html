@@ -1,13 +1,12 @@
 <h1 ng-class="{displayed: true}">/lab</h1>
 <div class="content" ng-class="{displayed: true}">
 
-<h2>Libraries</h2>
-<ul>
-	<li data-ng-repeat="lib in libraries"><a href="{{lib.url}}" target="_blank">{{lib.name}}</a><br/>{{lib.description}}</li>
-</ul>
-
-<h2>Projects</h2>
-<ul>
-	<li data-ng-repeat="proj in projects"><a href="{{proj.url}}" target="_blank">{{proj.name}}</a><br/>{{proj.description}}</li>
-</ul>
+    <div data-ng-repeat="category in lab_data">
+        <h2>{{category.name}}</h2>
+        <ul>
+           <li data-ng-repeat="item in category.content">
+            <a href="{{item.url}}" target="_blank">{{item.name}}</a>
+            <br/>{{item.description}}</li>
+        </ul>
+    </div>
 </div>

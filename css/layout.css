@@ -63,7 +63,7 @@ h3{
 }
 
 li,p{
-	font-size:22px;
+	font-size:20px;
 	font-weight: 200;
 	line-height: 1.5;
 }
@@ -113,7 +113,8 @@ a:active {
 }
 
 #main .container{
-	max-width: 850px;
+	max-width: 890px;
+	padding:0 20px;
 }
 
 #main .content{
