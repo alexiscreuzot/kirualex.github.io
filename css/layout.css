@@ -68,13 +68,6 @@ li,p{
 	line-height: 1.5;
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-li,p{
-	font-weight: 300;
-}
-}
-
 a,
 a:link {
 	color: #1ABC9C;
@@ -86,6 +79,19 @@ a:hover,
 a:active {
 	text-decoration: none;
 	color:#48c9b0;
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+h1{
+	font-size:44px;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+li,p{
+	font-weight: 300;
+}
 }
 
 /* ---------------------------------- *\
