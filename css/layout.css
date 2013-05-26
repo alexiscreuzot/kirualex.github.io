@@ -17,6 +17,7 @@ body {
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	background: url("../images/shattered.png") @bg;
 	color:@white;
+
 }
 
 #topline{
@@ -24,8 +25,6 @@ body {
 	height: 5px;
 	background:rgba(0,0,0,0);
 	-webkit-transition: background 0.5s linear;
-	transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
 }
 
 #topline.admin
@@ -74,15 +73,15 @@ h1{
 	font-weight: 300;
 	margin-top:30px;
 	margin-bottom:50px;
-	margin-left:-10px;
-	-webkit-transition: all .3s ease-out;
-	transform: translate3d(0,0,0);
-	-webkit-transform: translate3d(0,0,0);
+
+	-webkit-transition: .5s;
+	-webkit-transform: translateZ(30px);
+
 	opacity:0;
 }
 
 h1.displayed{
-	margin-left:0;
+	-webkit-transform: translateZ(0);
 	opacity:1;
 }
 
@@ -138,23 +137,26 @@ a:active {
 /* Main */
 
 #main{
+
 	padding-bottom: 100px;
 }
 
 #main .container{
+	-webkit-perspective: 600px;
+	-webkit-perspective-origin: 50% 50%;
 	max-width: 890px;
 	padding:0 20px;
 }
 
 #main .content{
 	opacity:0;
-	margin-left:10px;
-	-webkit-transition: all .3s ease-out ;
+	-webkit-transition: .5s;
+	-webkit-transform: translateZ(-30px);
 }
 
 #main .content.displayed{
 	opacity:1;
-	margin-left:0;
+	-webkit-transform: translateZ(0);
 }
 
 /* Footer */
