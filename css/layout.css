@@ -209,7 +209,7 @@ ul.scribbles li a.btn:hover{
 		font-size:18px;
 		font-weight: 300;
 	}
-	ul.scribbles li a{
+	ul.scribbles li a.btn{
 		font-weight: 300;
 	}
 	#header .btn-toolbar{
