@@ -75,7 +75,7 @@ h1{
 	margin-bottom:50px;
 
 	-webkit-transition: .5s;
-	-webkit-transform: translateZ(30px);
+	-webkit-transform: translateZ(-25px);
 
 	opacity:0;
 }
@@ -137,13 +137,13 @@ a:active {
 /* Main */
 
 #main{
-
 	padding-bottom: 100px;
+	-webkit-perspective: 600px;
+	-webkit-perspective-origin: 50% 50%;
 }
 
 #main .container{
-	-webkit-perspective: 600px;
-	-webkit-perspective-origin: 50% 50%;
+
 	max-width: 890px;
 	padding:0 20px;
 }
@@ -151,7 +151,7 @@ a:active {
 #main .content{
 	opacity:0;
 	-webkit-transition: .5s;
-	-webkit-transform: translateZ(-30px);
+	-webkit-transform: translateZ(-25px);
 }
 
 #main .content.displayed{
