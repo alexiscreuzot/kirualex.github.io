@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://alexiscreuzot.com/#!/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://alexiscreuzot.com/#!/lab</loc>
+    <changefreq>monthly</changefreq>
+    <priority>2.0</priority>
+  </url>
+  <url>
+    <loc>http://alexiscreuzot.com/#!/scribbles</loc>
+    <changefreq>weekly</changefreq>
+    <priority>2.0</priority>
+  </url>
+  <url>
+    <loc>http://alexiscreuzot.com/#!/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>3.0</priority>
+  </url>
+</urlset>

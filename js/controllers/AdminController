@@ -1,7 +1,0 @@
-'use strict';
-
-myApp.controller('AdminController', function($scope, $location) {
-
-
-
-});

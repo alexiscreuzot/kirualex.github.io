@@ -45,6 +45,4 @@ var draw = function (w,h,r) {
 var w = $('#holder').width();
 var h = $('#holder').height();
 var r = Raphael("holder", w, h);
-less.refresh();
-console.log(getLessVar('myColor', 'color'));
 var graphy = draw(w,h,r);
