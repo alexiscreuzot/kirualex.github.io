@@ -199,6 +199,9 @@ ul.scribbles li a.btn:hover{
 /* ----------  Mobile ----------- */
 
 @media (max-width: 480px) {
+	* {
+		font-weight: 300;
+	}
 
 	h1{
 		font-size:44px;
@@ -207,7 +210,6 @@ ul.scribbles li a.btn:hover{
 	}
 	li,p{
 		font-size:18px;
-		font-weight: 300;
 	}
 	#header .btn-toolbar{
 		margin:30px auto;
