@@ -163,12 +163,37 @@ a:active {
 	bottom: 0;
 }
 
-/* Articles */
+/* Scribbles */
 
-.article .separator {
-	width: 20px;
-	margin:40px auto;
-	color:@color;
+ul.scribbles {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.scribbles li{
+	padding : 12px 0;
+}
+
+ul.scribbles span{
+	position: absolute;
+	text-align: right;
+	width: 70px;
+	display: block;
+	padding-top: 4px;
+}
+
+ul.scribbles li a.btn{
+	font-weight: 200;
+	font-size: 20px;
+	background: rgba(0,0,0,0.3);
+	color: @white;
+	padding: 8px 20px;
+	margin-left: 90px;
+}
+
+ul.scribbles li a.btn:hover{
+	background: rgba(0,0,0,0.6);
 }
 
 /* ----------  Mobile ----------- */

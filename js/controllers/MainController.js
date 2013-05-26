@@ -32,7 +32,20 @@ myApp.controller('MainController',function($scope){
     }];
 
     // Scribbles
-    $scope.scribbles = [{title:"Test de titre", content:"test de contenu", date:"01-01-01"},{title:"Test de titre", content:"test de contenu", date:"01-01-01"},{title:"Test de titre", content:"test de contenu", date:"01-01-01"}];
+    $scope.scribbles =
+    [{
+        id:1,
+        title: "Test de titre",
+        date: "13 Apr"
+    },{
+        id:2,
+        title: "Test de titre",
+        date: "22 May"
+    },{
+        id:3,
+        title: "Test de titre",
+        date: "24 May"
+    }];
 
     // Ready
     $scope.htmlReady();
