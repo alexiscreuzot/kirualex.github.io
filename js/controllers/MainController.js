@@ -1,7 +1,7 @@
 'use strict';
 
 // declare controller to myApp
-myApp.controller('MainController',function($scope){
+myApp.controller('MainController',function($scope, $route, $routeParams){
 
     // Libs
     $scope.lab_data =
@@ -34,18 +34,26 @@ myApp.controller('MainController',function($scope){
     // Scribbles
     $scope.scribbles =
     [{
-        id:1,
+        id:0,
         title: "Test de titre",
         date: "13 Apr"
     },{
-        id:2,
+        id:1,
         title: "Test de titre",
         date: "22 May"
     },{
-        id:3,
+        id:2,
         title: "Test de titre",
         date: "24 May"
     }];
+
+    // TODO
+    // Scribble detail
+    console.log($route, $routeParams);
+    if($route == 'scribble'){
+        $scope.scribble = $scope.scribbles[$routeParams];
+    }
+
 
     // Ready
     $scope.htmlReady();

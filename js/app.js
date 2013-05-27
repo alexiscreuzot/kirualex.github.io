@@ -15,6 +15,10 @@ myApp.config(function ($routeProvider,$locationProvider){
     controller:'MainController',
     templateUrl:'partials/scribbles.html'
   })
+  .when('/scribble/:id',{
+    controller:'MainController',
+    templateUrl:'partials/scribble.html'
+  })
   .when('/contact',{
     controller:'MainController',
     templateUrl:'partials/contact.html'

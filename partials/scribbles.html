@@ -4,7 +4,7 @@
     <ul class="scribbles">
     <li data-ng-repeat="babble in scribbles | orderBy:'id':true">
         <span>{{babble.date}}</span>
-       <a href="#" class="btn">{{babble.title}}</a>
+       <a href="#!/scribble/{{babble.id}}" class="btn">{{babble.title}}</a>
    </li>
 </ul>
 </div>
