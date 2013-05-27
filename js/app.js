@@ -15,7 +15,7 @@ myApp.config(function ($routeProvider,$locationProvider){
     controller:'MainController',
     templateUrl:'partials/scribbles.html'
   })
-  .when('/scribble/:id',{
+  .when('/scribble/:scribbleId',{
     controller:'MainController',
     templateUrl:'partials/scribble.html'
   })

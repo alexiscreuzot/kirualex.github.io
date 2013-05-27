@@ -1,7 +1,6 @@
 <h1 ng-class="{displayed: true}">{{scribble.title}}</h1>
 <div class="content" ng-class="{displayed: true}">
     <span>{{scribble.date}}</span><br/>
-    <p>
-        {{scribble.content}}
-    </p>
+    <div class="article" ng-bind-html-unsafe="scribble.content">
+    </div>
 </div>

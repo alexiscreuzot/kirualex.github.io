@@ -1,7 +1,7 @@
 'use strict';
 
 // declare controller to myApp
-myApp.controller('MainController',function($scope, $route, $routeParams){
+myApp.controller('MainController',function($scope, $http, $routeParams){
 
     // Libs
     $scope.lab_data =
@@ -49,10 +49,19 @@ myApp.controller('MainController',function($scope, $route, $routeParams){
 
     // TODO
     // Scribble detail
-    console.log($route, $routeParams);
-    if($route == 'scribble'){
-        $scope.scribble = $scope.scribbles[$routeParams];
+    if($routeParams.scribbleId){
+        $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
+
+        $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
+          //$scope.scribble.content = data;
+          var dataToParse = {text:data};
+          $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
+              $scope.scribble.content = parsedData;
+          });
+      });
     }
+    
+    
 
 
     // Ready
