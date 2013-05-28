@@ -70,7 +70,7 @@ body {
 }
 
 h1{
-	font-size:50px;
+	font-size:48px;
 	font-weight: 300;
 	margin-top:30px;
 	margin-bottom:50px;
@@ -87,7 +87,12 @@ h1.displayed{
 }
 
 h2{
-	font-size:20px;
+	font-size:22px;
+	font-weight: 500;
+}
+
+h3{
+	font-size:18px;
 	font-weight: 500;
 }
 
@@ -219,6 +224,10 @@ ul.scribbles li a.btn:hover{
 	}
 	#header .btn-toolbar{
 		margin:30px auto;
+	}
+
+	#main .container{
+		padding:0 10px;
 	}
 
 	.loader{
