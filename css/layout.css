@@ -250,10 +250,6 @@ ul.scribbles li a.btn:hover{
 	}
 
 	/* layout */
-	#main{
-		padding-bottom: 60px;
-	}
-
 	#main .container{
 		padding:0px 10px;
 	}
