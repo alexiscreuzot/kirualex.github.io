@@ -45,6 +45,10 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         id:2,
         title: "KANibHelper presentation",
         date: "24 May"
+    },{
+        id:3,
+        title: "ColourLove Project",
+        date: "28 May"
     }];
 
     // Scribble detail
