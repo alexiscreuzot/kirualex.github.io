@@ -249,7 +249,7 @@ ul.scribbles li a.btn:hover{
 	}
 
 	.mobileScrolled #main .container{
-		padding:140px 10px;
+		padding:140px 10px 0px;
 	}
 
 	.loader{
