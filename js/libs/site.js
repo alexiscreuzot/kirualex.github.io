@@ -69,8 +69,12 @@ var clicky = refresh_graph(w,h,r);
 // handler scroll mobile
 var toggled = false;
 var sizeToScroll = 50;
-$(window).scroll(function() {
-  var scrollTop = $(window).scrollTop();
+
+window.onscroll = whenScroll;
+window.addEventListener("gesturechange", whenScroll, false);
+
+function whenScroll() {
+var scrollTop = $(window).scrollTop();
   if(scrollTop>=sizeToScroll && !toggled){
     $('#page').toggleClass('mobileScrolled');
     toggled = true;
@@ -78,5 +82,5 @@ $(window).scroll(function() {
     $('#page').toggleClass('mobileScrolled');
     toggled = false;
   }
-});
+}
 
