@@ -211,6 +211,7 @@ ul.scribbles li a.btn:hover{
 	}
 
 	/* Menu */
+
 	.mobileScrolled #header .btn-toolbar{
 		width:100%;
 		background-color: @color;
@@ -243,8 +244,12 @@ ul.scribbles li a.btn:hover{
 	}
 
 	/* layout */
+	#main .container{
+		padding:0px 10px;
+	}
+
 	.mobileScrolled #main .container{
-		padding:120px 10px;
+		padding:140px 10px;
 	}
 
 	.loader{
