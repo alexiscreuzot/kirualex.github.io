@@ -215,6 +215,12 @@ ul.scribbles li a.btn:hover{
 		margin-top:20px;
 		margin-bottom:30px;
 	}
+
+ul.scribbles li a.btn{
+	font-size:18px;
+	padding: 6px 14px;
+}
+
 	li,p{
 		font-size:18px;
 		font-weight: 300;
