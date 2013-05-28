@@ -200,6 +200,10 @@ ul.scribbles li a.btn:hover{
 /* ----------  Mobile ----------- */
 
 @media (max-width: 480px) {
+	html,
+	body {
+		height:99%;
+	}
 
 	/* typo */
 	h1{
@@ -247,7 +251,7 @@ ul.scribbles li a.btn:hover{
 
 	/* layout */
 	#main{
-		padding-bottom: 50px;
+		padding-bottom: 60px;
 	}
 
 	#main .container{
