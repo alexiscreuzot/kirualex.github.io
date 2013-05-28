@@ -60,7 +60,7 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
     },{
         id:4,
         title: "Building the 7 Minutes Workout App",
-        date: "28 May"
+        date: "29 May"
     }];
 
     // Scribble detail
