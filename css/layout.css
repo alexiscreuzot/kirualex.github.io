@@ -190,6 +190,7 @@ ul.scribbles li a.btn{
 	color: @white;
 	padding: 8px 20px;
 	margin-left: 90px;
+	text-align: left;
 }
 
 ul.scribbles li a.btn:hover{
