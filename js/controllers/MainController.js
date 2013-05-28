@@ -5,7 +5,15 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
 
     // Libs
     $scope.lab_data =
-    [{
+    [,{
+        name:"iOS Apps",
+        content:
+        [{
+            name:"7-minute Workout",
+            url:"https://itunes.apple.com/us/app/7-minutes-workout/id650627810?l=en&ls=1&mt=8",
+            description:"The perfect assistant to get in shape using the scientific 7-minute Workout"
+        }]
+    },{
         name:"Libraries",
         content:
         [{
@@ -35,19 +43,23 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
     $scope.scribbles =
     [{
         id:0,
-        title: "KALayoutHelper presentation",
+        title: "KALayoutHelper library",
         date: "13 Apr"
     },{
         id:1,
-        title: "KASlideShow presentation",
+        title: "KASlideShow library",
         date: "22 May"
     },{
         id:2,
-        title: "KANibHelper presentation",
+        title: "KANibHelper library",
         date: "24 May"
     },{
         id:3,
-        title: "ColourLove Project",
+        title: "ColourLove Project, DRY KISS anyone ?",
+        date: "27 May"
+    },{
+        id:4,
+        title: "Building the 7 Minutes Workout App",
         date: "28 May"
     }];
 

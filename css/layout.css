@@ -14,9 +14,12 @@ body {
 	margin:0;
 	padding:0;
 	height:95%;
+}
+
+body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
-	background: url("../images/shattered.png") @bg;
 	color:@white;
+	background: url("../images/shattered.png") @bg;
 }
 
 .hidden{
@@ -86,7 +89,7 @@ h3{
 li,p{
 	font-size:20px;
 	font-weight: 200;
-	line-height: 1.5;
+	line-height: 1.8;
 }
 
 a,
