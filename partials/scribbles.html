@@ -2,7 +2,7 @@
 <div class="content" ng-class="{displayed: true}">
     <ul class="scribbles">
     <li data-ng-repeat="babble in scribbles | orderBy:'id':true">
-        <span>{{babble.date}}</span>
+        <span class="date">{{babble.date}}</span>
        <a href="#!/scribble/{{babble.id}}" class="btn">{{babble.title}}</a>
    </li>
 </ul>

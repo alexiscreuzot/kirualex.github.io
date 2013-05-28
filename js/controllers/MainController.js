@@ -35,19 +35,18 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
     $scope.scribbles =
     [{
         id:0,
-        title: "Test de titre",
+        title: "KALayoutHelper presentation",
         date: "13 Apr"
     },{
         id:1,
-        title: "Test de titre",
+        title: "KASlideShow presentation",
         date: "22 May"
     },{
         id:2,
-        title: "Test de titre",
+        title: "KANibHelper presentation",
         date: "24 May"
     }];
 
-    // TODO
     // Scribble detail
     if($routeParams.scribbleId){
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
