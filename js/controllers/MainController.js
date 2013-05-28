@@ -11,7 +11,7 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         [{
             name:"KALayoutHelper",
             url:"http://kirualex.github.io/KALayoutHelper",
-            description:"A work in progress aiming to add a layout mecanism (similar to android) to views in iOS"
+            description:"A work in progress aiming to add a layout mechanism (similar to android) to views in iOS"
         },{
             name:"KASlideShow",
             url:"http://kirualex.github.io/KASlideShow",
@@ -60,9 +60,6 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
           });
       });
     }
-    
-    
-
 
     // Ready
     $scope.htmlReady();

@@ -66,4 +66,3 @@ var r = Raphael("holder", w, h);
 var clicky = refresh_graph(w,h,r);
 
 
-
