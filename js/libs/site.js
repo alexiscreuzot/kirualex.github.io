@@ -68,7 +68,7 @@ var clicky = refresh_graph(w,h,r);
 //
 // handler scroll mobile
 var toggled = false;
-var sizeToScroll = 45;
+var sizeToScroll = 30;
 
 var update = function(){
     var scrollTop = $(window).scrollTop();

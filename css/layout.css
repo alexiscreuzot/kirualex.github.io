@@ -211,6 +211,9 @@ ul.scribbles li a.btn:hover{
 	}
 
 	/* Menu */
+	#header .btn-toolbar{
+		margin:30px auto;
+	}
 
 	.mobileScrolled #header .btn-toolbar{
 		width:100%;
@@ -249,7 +252,7 @@ ul.scribbles li a.btn:hover{
 	}
 
 	.mobileScrolled #main .container{
-		padding:140px 10px 0px;
+		padding:100px 10px 0px;
 	}
 
 	.loader{
