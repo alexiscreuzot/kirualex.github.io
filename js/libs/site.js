@@ -70,17 +70,19 @@ var clicky = refresh_graph(w,h,r);
 var toggled = false;
 var sizeToScroll = 50;
 
-window.onscroll = whenScroll;
-window.addEventListener("gesturechange", whenScroll, false);
-
-function whenScroll() {
-var scrollTop = $(window).scrollTop();
-  if(scrollTop>=sizeToScroll && !toggled){
-    $('#page').toggleClass('mobileScrolled');
-    toggled = true;
-  }else if(scrollTop<sizeToScroll && toggled){
-    $('#page').toggleClass('mobileScrolled');
-    toggled = false;
-  }
+var update = function(){
+    var scrollTop = $(window).scrollTop();
+    if(scrollTop>=sizeToScroll && !toggled){
+        $('#page').toggleClass('mobileScrolled');
+        toggled = true;
+    }else if(scrollTop<sizeToScroll && toggled){
+        $('#page').toggleClass('mobileScrolled');
+        toggled = false;
+    }
 }
+
+$(window).bind("touchmove",update);
+$(window).bind("scroll", update);
+
+
 
