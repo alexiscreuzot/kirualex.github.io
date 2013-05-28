@@ -1,10 +1,26 @@
+
+//
+// Analytics
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-41264154-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+//
+// Graph stuff
 var getLessVar = function (name, prop) {
   var value = $('<div class="' + name + '"></div>').hide().appendTo('body').css(prop)
   $('.' + name).remove()
   return /^\d+/.test(value) ? +value : value
 }
 
-var draw = function (w,h,r) {
+var refresh_graph = function (w,h,r) {
 
     var padding = 5;
     var bg = r.path();
@@ -45,4 +61,9 @@ var draw = function (w,h,r) {
 var w = $('#holder').width();
 var h = $('#holder').height();
 var r = Raphael("holder", w, h);
-var graphy = draw(w,h,r);
+
+//
+// Handler on page change
+var clicky = refresh_graph(w,h,r);
+
+
