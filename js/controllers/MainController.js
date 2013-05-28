@@ -51,12 +51,13 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
     // Scribble detail
     if($routeParams.scribbleId){
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
-
         $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
           //$scope.scribble.content = data;
           var dataToParse = {text:data};
           $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
               $scope.scribble.content = parsedData;
+              $('.loader').addClass('hidden');
+              $('.article').addClass('displayed');
           });
       });
     }

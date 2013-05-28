@@ -36,6 +36,11 @@ body {
 	display: none;
 }
 
+.loader{
+	margin-top:150px;
+	text-align: center;
+}
+
 /* ----------  Buttons ----------- */
 
 .btn.btn-primary
@@ -142,13 +147,15 @@ a:active {
 	padding:0 20px;
 }
 
-#main .content{
+#main .content,
+#main .content .article{
 	opacity:0;
 	-webkit-transition: .5s;
 	-webkit-transform: translateX(10px);
 }
 
-#main .content.displayed{
+#main .content.displayed,
+#main .content .article.displayed{
 	opacity:1;
 	-webkit-transform: translateX(0);
 }
