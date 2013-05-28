@@ -212,10 +212,6 @@ ul.scribbles li a.btn:hover{
 
 	/* Menu */
 	#header .btn-toolbar{
-		margin:30px auto;
-	}
-
-	.mobileScrolled #header .btn-toolbar{
 		width:100%;
 		background-color: @color;
 		text-align: center;
@@ -224,18 +220,18 @@ ul.scribbles li a.btn:hover{
 		z-index: 9999;
 	}
 
-	.mobileScrolled #header .btn-toolbar .btn-group{
+	#header .btn-toolbar .btn-group{
 		width:213px;
 		margin:0 auto;
 	}
 
-	.mobileScrolled .btn-group > .btn:first-of-type {
+	.btn-group > .btn:first-of-type {
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 	}
 
-	.mobileScrolled .btn-group > .btn:first-of-type,
-	.mobileScrolled .btn-group > .btn:last-of-type {
+	.btn-group > .btn:first-of-type,
+	.btn-group > .btn:last-of-type {
 		border-radius: 0;
 	}
 
@@ -251,8 +247,8 @@ ul.scribbles li a.btn:hover{
 		padding:0px 10px;
 	}
 
-	.mobileScrolled #main .container{
-		padding:100px 10px 0px;
+	#main .container{
+		padding:60px 10px 0px;
 	}
 
 	.loader{

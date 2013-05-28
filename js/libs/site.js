@@ -65,24 +65,5 @@ var r = Raphael("holder", w, h);
 // Handler on page change
 var clicky = refresh_graph(w,h,r);
 
-//
-// handler scroll mobile
-var toggled = false;
-var sizeToScroll = 30;
-
-var update = function(){
-    var scrollTop = $(window).scrollTop();
-    if(scrollTop>=sizeToScroll && !toggled){
-        $('#page').toggleClass('mobileScrolled');
-        toggled = true;
-    }else if(scrollTop<sizeToScroll && toggled){
-        $('#page').toggleClass('mobileScrolled');
-        toggled = false;
-    }
-}
-
-$(window).bind("touchmove",update);
-$(window).bind("scroll", update);
-
 
 
