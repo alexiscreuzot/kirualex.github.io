@@ -243,6 +243,10 @@ ul.scribbles li a.btn:hover{
 	}
 
 	/* layout */
+	#main{
+		padding-bottom: 50px;
+	}
+
 	#main .container{
 		padding:0px 10px;
 	}
