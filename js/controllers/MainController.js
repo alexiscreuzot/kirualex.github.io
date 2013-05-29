@@ -65,7 +65,7 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
 
     // Scribble detail
     if($routeParams.scribbleId){
-        Graphy.startLoading();
+        Graphy.startLoading(120);
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
         $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
           var dataToParse = {text:data};

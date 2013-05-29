@@ -51,16 +51,16 @@ var Graphy = (function() {
     return path;
   }
 
-  function animation() {
-        var anim = Raphael.animation({path: randomPath()}, 100, "linear");
+  function animation(time) {
+        var anim = Raphael.animation({path: randomPath()}, time, "linear");
         bg.animate(anim);
     }
 
-return { 
-    animation :function () {
-        animation();
-    },startLoading : function(){
-        refreshIntervalId = setInterval(function(){animation()}, 105);
+return {
+    animate :function (time) {
+        animation(time);
+    },startLoading : function(time){
+        refreshIntervalId = setInterval(function(){animation(time)}, time+5);
     },stopLoading : function(){
         clearInterval(refreshIntervalId);
     },init : function(){
