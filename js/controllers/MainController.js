@@ -60,7 +60,7 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
     },{
         id:4,
         title: "Building the 7 Minute Workout App",
-        date: "29 May"
+        date: "30 May"
     }];
 
     // Scribble detail
@@ -68,7 +68,6 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         Graphy.startLoading();
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
         $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
-          //$scope.scribble.content = data;
           var dataToParse = {text:data};
           $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
               $scope.scribble.content = parsedData;
