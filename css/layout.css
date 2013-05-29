@@ -13,7 +13,7 @@ html,
 body {
 	margin:0;
 	padding:0;
-	height:95%;
+	height:100%;
 }
 
 body{
@@ -116,7 +116,8 @@ a:active {
 
 #header .btn-toolbar{
 	width:213px;
-	margin:50px auto;
+	margin:0px auto;
+	padding: 50px;
 }
 
 #header .btn-toolbar a.btn
@@ -222,7 +223,7 @@ ul.scribbles li a.btn:hover{
 		width:100%;
 		background-color: @color;
 		text-align: center;
-		margin:0px auto;
+		padding: 0px;
 		position:fixed;
 		z-index: 9999;
 	}
