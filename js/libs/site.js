@@ -20,14 +20,16 @@ var getLessVar = function (name, prop) {
 }
 
 //
-// Graph stuff
-var w = $('#holder').width();
-var h = $('#holder').height();
-var r = Raphael("holder", w, h);
-var padding = 5;
-var bg = r.path();
+// Wiggly graph, my signature !
+var Graphy = (function() {
+  var w = $('#holder').width();
+  var h = $('#holder').height();
+  var r = Raphael("holder", w, h);
+  var padding = 5;
+  var bg = r.path();
+  var refreshIntervalId;
 
-function randomPath() {
+  function randomPath() {
     var length = Math.round(w/8);
     var path = "";
     var   x = 0;
@@ -47,20 +49,25 @@ function randomPath() {
         }
     }
     return path;
-}
-bg.attr({path: randomPath(),stroke:getLessVar('myColor', 'color'), opacity: 1, fill:"none"});
+  }
 
-var animation = function () {
-    var anim = Raphael.animation({path: randomPath()}, 100, "linear");
-    bg.animate(anim);
+  function animation() {
+        var anim = Raphael.animation({path: randomPath()}, 100, "linear");
+        bg.animate(anim);
+    }
+
+return { 
+    animation :function () {
+        animation();
+    },startLoading : function(){
+        refreshIntervalId = setInterval(function(){animation()}, 105);
+    },stopLoading : function(){
+        clearInterval(refreshIntervalId);
+    },init : function(){
+        bg.attr({path: randomPath(),stroke:getLessVar('myColor', 'color'), opacity: 1, fill:"none"});
+    }
 };
-animation();
+})();
 
-var refreshIntervalId;
-function startLoading(){
-    refreshIntervalId = setInterval(function(){animation()}, 105);
-}
 
-function stopLoading(){
-    clearInterval(refreshIntervalId);
-}
+Graphy.init();

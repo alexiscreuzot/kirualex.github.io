@@ -31,7 +31,7 @@
     <div id="header">
       <div class="btn-toolbar">
         <div class="btn-group">
-          <a data-ng-repeat="menu in menus" class="btn btn-primary" ng-class="{active: routeIs('/{{menu.link}}')}" href="#!/{{menu.link}}" onClick="animation();_gaq.push(['_trackEvent', '{{menu.link}}', 'pageview', '']);">
+          <a data-ng-repeat="menu in menus" class="btn btn-primary" ng-class="{active: routeIs('/{{menu.link}}')}" href="#!/{{menu.link}}" onClick="Graphy.animation();_gaq.push(['_trackEvent', '{{menu.link}}', 'pageview', '']);">
             <i class="icon-{{menu.icon}} icon-large"></i>
           </a>
         </div>

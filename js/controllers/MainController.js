@@ -9,9 +9,9 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         name:"iOS Apps",
         content:
         [{
-            name:"7-minute Workout",
-            url:"https://itunes.apple.com/us/app/7-minutes-workout/id650627810?l=en&ls=1&mt=8",
-            description:"The perfect assistant to get in shape using the scientific 7-minute Workout"
+            name:"7 minute Workout",
+            url:"https://itunes.apple.com/app/7-minutes-workout/id650627810?&ls=1&mt=8",
+            description:"The perfect assistant to get in shape using the scientific 7-minute Workout, directly on your iPhone"
         }]
     },{
         name:"Libraries",
@@ -59,13 +59,13 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         date: "27 May"
     },{
         id:4,
-        title: "Building the 7 Minutes Workout App",
+        title: "Building the 7 Minute Workout App",
         date: "29 May"
     }];
 
     // Scribble detail
     if($routeParams.scribbleId){
-        startLoading();
+        Graphy.startLoading();
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
         $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
           //$scope.scribble.content = data;
@@ -73,7 +73,7 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
           $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
               $scope.scribble.content = parsedData;
               $('.article').addClass('displayed');
-              stopLoading();
+              Graphy.stopLoading();
           });
       });
     }
