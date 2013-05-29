@@ -208,13 +208,13 @@ ul.scribbles li a.btn:hover{
 
 	/* typo */
 	h1{
-		font-size:44px;
+		font-size:40px;
 		margin-top:20px;
 		margin-bottom:30px;
 	}
 
 	li,p{
-		font-size:18px;
+		font-size:16px;
 		font-weight: 300;
 	}
 
@@ -245,7 +245,7 @@ ul.scribbles li a.btn:hover{
 
 	/* Scribbles */
 	ul.scribbles li a.btn{
-		font-size:18px;
+		font-size:16px;
 		padding: 6px 14px;
 		font-weight: 300;
 	}
