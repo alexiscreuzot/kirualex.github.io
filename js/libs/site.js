@@ -20,10 +20,12 @@ var getLessVar = function (name, prop) {
 }
 
 //
-// Wiggly graph, my signature !
+// Wiggly graph, kind of the website signature !
+//
 var Graphy = (function() {
-  var w = $('#holder').width();
-  var h = $('#holder').height();
+  var holder = $('#holder');
+  var w = holder.width();
+  var h = holder.height();
   var r = Raphael("holder", w, h);
   var padding = 5;
   var bg = r.path();
@@ -64,7 +66,18 @@ return {
     },stopLoading : function(){
         clearInterval(refreshIntervalId);
     },init : function(){
+        // First draw
         bg.attr({path: randomPath(),stroke:getLessVar('myColor', 'color'), opacity: 1, fill:"none"});
+
+        // Nice effect on hover
+        holder.hover(
+         function () {
+           Graphy.startLoading(150);
+         }, 
+         function () {
+           Graphy.stopLoading();
+         }
+     );
     }
 };
 })();
