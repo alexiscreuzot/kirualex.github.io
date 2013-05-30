@@ -8,24 +8,20 @@ myApp.config(function ($routeProvider,$locationProvider){
   //$locationProvider.html5Mode(true);
   $routeProvider
   .when('/lab',{
-    controller:'MainController',
+    controller:'LabController',
     templateUrl:'partials/lab.html'
   })
   .when('/scribbles',{
-    controller:'MainController',
+    controller:'ScribblesController',
     templateUrl:'partials/scribbles.html'
   })
   .when('/scribble/:scribbleId',{
-    controller:'MainController',
+    controller:'ScribblesController',
     templateUrl:'partials/scribble.html'
   })
   .when('/contact',{
     controller:'MainController',
     templateUrl:'partials/contact.html'
-  })
-  .when('/admin',{
-    controller:'MainController',
-    templateUrl:'partials/admin.html'
   })
   .when('/',{
     controller:'MainController',
