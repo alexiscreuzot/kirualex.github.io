@@ -1,5 +1,4 @@
 @bg: #242222;
-@fg: rgba(0,0,0,0.2);
 @white: #ECF0F1;
 @color: #1ABC9C;
 
@@ -17,14 +16,10 @@ body {
 	height:100%;
 }
 
-html{
-	background: url("../images/shattered.png") @bg;
-}
-
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	color:@white;
-	background: @fg;
+	background: url("../images/shattered.png") @bg;
 }
 
 .hidden{
@@ -231,14 +226,6 @@ ul.scribbles li a.btn:hover{
 /* ------------------- Mobile CSS ------------------------*/
 
 @media (max-width: 480px) {
-	html,
-	body {
-		height:99%;
-	}
-
-	body{
-		background: none;
-	}
 
 	/* typo */
 	h1{
