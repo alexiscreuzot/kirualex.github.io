@@ -73,7 +73,7 @@ return {
         holder.hover(
          function () {
            Graphy.startLoading(150);
-         }, 
+         },
          function () {
            Graphy.stopLoading();
          }

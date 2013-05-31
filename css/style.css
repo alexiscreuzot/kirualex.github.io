@@ -1,4 +1,5 @@
 @bg: #242222;
+@fg: rgba(0,0,0,0.2);
 @white: #ECF0F1;
 @color: #1ABC9C;
 
@@ -16,10 +17,14 @@ body {
 	height:100%;
 }
 
+html{
+	background: url("../images/shattered.png") @bg;
+}
+
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	color:@white;
-	background: url("../images/shattered.png") @bg;
+	background: @fg;
 }
 
 .hidden{
@@ -49,6 +54,49 @@ body{
 	background-color: lighten(@color,10%);
 }
 
+/* ----------  Anims ----------- */
+
+.animate{
+	transition: .5s;
+	-webkit-transition: .5s;
+	opacity:0;
+}
+
+.animate.from-left{
+	transform: translateX(-10px);
+	-webkit-transform: translateX(-10px);
+}
+
+.animate.from-right{
+	transform: translateX(10px);
+	-webkit-transform: translateX(10px);
+}
+
+.animate.from-top{
+	transform: translateY(-15px);
+	-webkit-transform: translateY(-15px);
+}
+
+.animate.from-bottom{
+	transform: translateY(15px);
+	-webkit-transform: translateY(15px);
+}
+
+.animate.from-far{
+	transform: translateZ(-20px);
+	-webkit-transform: translateZ(-20px);
+}
+
+.animate.from-near{
+	transform: translateZ(20px);
+	-webkit-transform: translateZ(20px);
+}
+
+.animate.trigger{
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	opacity:1;
+}
 /* ----------  Typo ----------- */
 
 ::-moz-selection {
@@ -64,17 +112,8 @@ h1{
 	font-weight: 300;
 	margin-top:30px;
 	margin-bottom:50px;
-
-	-webkit-transition: .5s;
-	-webkit-transform: translatex(-10px);
-
-	opacity:0;
 }
 
-h1.displayed{
-	-webkit-transform: translateZ(0);
-	opacity:1;
-}
 
 h2{
 	font-size:22px;
@@ -110,6 +149,12 @@ a:active {
 #page{
 	min-height: 100%;
 	position: relative;
+
+	perspective: 600px;
+	perspective-origin: 50% 50%;
+
+	-webkit-perspective: 600px;
+	-webkit-perspective-origin: 50% 50%;
 }
 
 /* Header */
@@ -133,35 +178,11 @@ a:active {
 
 #main{
 	padding-bottom: 100px;
-	-webkit-perspective: 600px;
-	-webkit-perspective-origin: 50% 50%;
 }
 
 #main .container{
 	max-width: 890px;
 	padding:0 20px;
-}
-
-#main .content,
-#main .content .article{
-	opacity:0;
-	-webkit-transition: .5s;
-	-webkit-transform: translateX(10px);
-}
-
-#main .content.displayed,
-#main .content .article.displayed{
-	opacity:1;
-	-webkit-transform: translateX(0);
-}
-
-/* Footer */
-
-#footer{
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom: 0;
 }
 
 /* Scribbles */
@@ -187,7 +208,7 @@ ul.scribbles span{
 ul.scribbles li a.btn{
 	font-weight: 200;
 	font-size: 20px;
-	background: rgba(0,0,0,0.3);
+	background: fadeout(black,40%);
 	color: @white;
 	padding: 8px 20px;
 	margin-left: 90px;
@@ -195,10 +216,19 @@ ul.scribbles li a.btn{
 }
 
 ul.scribbles li a.btn:hover{
-	background: rgba(0,0,0,0.6);
+	background: fadeout(@color,40%);
 }
 
-/* ----------  Mobile ----------- */
+/* Footer */
+
+#footer{
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom: 0;
+}
+
+/* ------------------- Mobile CSS ------------------------*/
 
 @media (max-width: 480px) {
 	html,
@@ -257,10 +287,5 @@ ul.scribbles li a.btn:hover{
 
 	#main .container{
 		padding:60px 10px 0px;
-	}
-
-	.loader{
-		margin-top:80px;
-		text-align: center;
 	}
 }

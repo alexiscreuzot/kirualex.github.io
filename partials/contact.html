@@ -1,9 +1,8 @@
-<h1 ng-class="{displayed: true}">/contact</h1>
-<div class="content" ng-class="{displayed: true}">
+<h1 class="animate from-left" ng-class="{trigger: true}">/contact</h1>
 
+<div class="content animate from-right" ng-class="{trigger: true}">
     <p>I'm currently <b><span ng-class="{hidden: perso.isAvailable}">not </span>open</b> for business.<br/>
     		<span ng-class="{hidden: perso.isAvailable}">But <a href="mailto:{{perso.mail}}">we can talk</a></span>
     		<span ng-class="{hidden: !perso.isAvailable}"><a href="mailto:{{perso.mail}}">Let's talk</a> </span>
     </p>
-
 </div>

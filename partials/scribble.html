@@ -1,5 +1,7 @@
-<a href="#!/scribbles"><i class="icon-mail-reply icon-large"></i></a><h1 ng-class="{displayed: true}">{{scribble.title}}</h1>
-<div class="content" ng-class="{displayed: true}">
+<a href="#!/scribbles"><i class="icon-mail-reply icon-large"></i></a>
+<h1 class="animate from-left" ng-class="{trigger: true}">{{scribble.title}}</h1>
+
+<div class="content animate from-right" ng-class="{trigger: true}">
     <p class="date">{{scribble.date}}</p><br/>
-    <div class="article" ng-bind-html-unsafe="scribble.content"></div>
+    <div class="article animate from-top" ng-bind-html-unsafe="scribble.content"></div>
 </div>

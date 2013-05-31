@@ -35,7 +35,7 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
           var dataToParse = {text:data};
           $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
               $scope.scribble.content = parsedData;
-              $('.article').addClass('displayed');
+              $('.article').addClass('trigger'); // anim
               Graphy.stopLoading();
           });
       });

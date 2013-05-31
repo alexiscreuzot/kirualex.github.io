@@ -1,5 +1,6 @@
-<h1 ng-class="{displayed: true}">/scribbles</h1>
-<div class="content" ng-class="{displayed: true}">
+<h1 class="animate from-left" ng-class="{trigger: true}">/scribbles</h1>
+
+<div class="content animate from-right" ng-class="{trigger: true}">
     <ul class="scribbles">
     <li data-ng-repeat="babble in scribbles | orderBy:'id':true">
         <span class="date">{{babble.date}}</span>
