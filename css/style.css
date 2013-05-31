@@ -236,6 +236,10 @@ ul.scribbles li a.btn:hover{
 		height:99%;
 	}
 
+	body{
+		background: none;
+	}
+
 	/* typo */
 	h1{
 		font-size:40px;
