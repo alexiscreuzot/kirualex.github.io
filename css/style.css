@@ -33,20 +33,17 @@ body{
 
 /* ----------  Buttons ----------- */
 
-.btn.btn-primary
-{
+.btn.btn-primary{
 	background-color: @color;
 }
 
 .btn.btn-primary.active,
-.btn.btn-primary.active:hover
-{
+.btn.btn-primary.active:hover{
 	background-color: darken(@color,8%);
 }
 
-.btn.btn-primary:hover
-{
-	background-color: lighten(@color,10%);
+.btn.btn-primary:hover{
+	background-color: lighten(@color,8%);
 }
 
 /* ----------  Anims ----------- */
@@ -144,12 +141,6 @@ a:active {
 #page{
 	min-height: 100%;
 	position: relative;
-
-	perspective: 600px;
-	perspective-origin: 50% 50%;
-
-	-webkit-perspective: 600px;
-	-webkit-perspective-origin: 50% 50%;
 }
 
 /* Header */
@@ -173,6 +164,12 @@ a:active {
 
 #main{
 	padding-bottom: 100px;
+
+	perspective: 600px;
+	perspective-origin: 50% 50%;
+
+	-webkit-perspective: 600px;
+	-webkit-perspective-origin: 50% 50%;
 }
 
 #main .container{
