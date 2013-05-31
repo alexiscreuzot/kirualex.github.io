@@ -151,13 +151,9 @@ a:active {
 	padding: 50px;
 }
 
-#header .btn-toolbar a.btn
-{
+#header .btn-toolbar a.btn{
 	padding: 11px 18px 6px;
 	color: @white;
-}
-
-#header .btn-toolbar a.btn i.icon-large{
 }
 
 /* Main */
@@ -226,7 +222,7 @@ ul.scribbles li a.btn:hover{
 
 	/* typo */
 	h1{
-		font-size:40px;
+		font-size:42px;
 		margin-top:20px;
 		margin-bottom:30px;
 	}
@@ -234,6 +230,11 @@ ul.scribbles li a.btn:hover{
 	li,p{
 		font-size:16px;
 		font-weight: 300;
+	}
+
+	/* layout */
+	#main .container{
+		padding:60px 10px 30px;
 	}
 
 	/* Menu */
@@ -251,11 +252,6 @@ ul.scribbles li a.btn:hover{
 		margin:0 auto;
 	}
 
-	.btn-group > .btn:first-of-type {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-
 	.btn-group > .btn:first-of-type,
 	.btn-group > .btn:last-of-type {
 		border-radius: 0;
@@ -266,14 +262,5 @@ ul.scribbles li a.btn:hover{
 		font-size:16px;
 		padding: 6px 14px;
 		font-weight: 300;
-	}
-
-	/* layout */
-	#main .container{
-		padding:0px 10px 30px;
-	}
-
-	#main .container{
-		padding:60px 10px 0px;
 	}
 }
