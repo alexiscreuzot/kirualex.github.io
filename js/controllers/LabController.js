@@ -19,7 +19,7 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
         [{
             name:"KAStatusBar",
             url:"http://alexiscreuzot.com/KAStatusBar/",
-            description:"An ultra-light status bar status bar notification/alert library for iOS"
+            description:"iOS status bar notification/alert library"
         },{
             name:"KALayoutHelper",
             url:"http://alexiscreuzot.com/KALayoutHelper",
@@ -27,7 +27,7 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
         },{
             name:"KASlideShow",
             url:"http://alexiscreuzot.com/KASlideShow",
-            description:"Light slideshow library for iOS "
+            description:"Simple slideshow library for iOS "
         },{
             name:"KANibHelper",
             url:"http://alexiscreuzot.com/KANibHelper",

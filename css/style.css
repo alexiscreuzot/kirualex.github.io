@@ -194,17 +194,15 @@ ul.scribbles span{
 }
 
 ul.scribbles li a.btn{
-	font-weight: 200;
 	font-size: 20px;
-	background: fadeout(black,40%);
-	color: @white;
+	background: fadeout(black,70%);
 	padding: 8px 20px;
 	margin-left: 90px;
 	text-align: left;
 }
 
 ul.scribbles li a.btn:hover{
-	background: fadeout(@color,40%);
+	background: @color;
 }
 
 /* Footer */
@@ -262,5 +260,13 @@ ul.scribbles li a.btn:hover{
 		font-size:16px;
 		padding: 6px 14px;
 		font-weight: 300;
+		margin-left: 70px;
 	}
+
+	ul.scribbles span{
+
+		width: 60px;
+
+	}
+
 }
