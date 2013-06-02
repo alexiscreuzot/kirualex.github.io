@@ -3,6 +3,12 @@
 // declare controller to myApp
 myApp.controller('ScribblesController',function($scope, $http, $routeParams){
 
+    // Init error page
+    var error_page;
+    $http.get('partials/error.html').success(function(data) {
+      error_page = data;
+  });
+
     // Scribbles
     $scope.scribbles =
     [{
@@ -33,13 +39,22 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
         $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
         $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
           var dataToParse = {text:data};
-          $http.post('https://api.github.com/markdown', angular.toJson(dataToParse)).success(function(parsedData) {
-              $scope.scribble.content = parsedData;
+
+          $http({method: 'POST', url: 'https://api.github.com/markdown', data:angular.toJson(dataToParse), timeout:10*1000}).
+          success(function(parsedData, status, headers, config) {
+            $scope.scribble.content = parsedData;
               $('.article').addClass('trigger'); // anim
               Graphy.stopLoading();
-          });
+          }).
+          error(function(data, status, headers, config) {
+            $scope.scribble.content = error_page;
+            $('.article').addClass('trigger'); // anim
+            Graphy.stopLoading();
+        });
       });
     }
+
+
 
     // Ready
     $scope.htmlReady();

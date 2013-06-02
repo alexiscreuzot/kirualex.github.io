@@ -22,12 +22,8 @@ body{
 	background: url("../images/shattered.png") @bg;
 }
 
-.hidden{
-	display: none;
-}
-
-.loader{
-	margin-top:150px;
+.centered{
+	margin:auto;
 	text-align: center;
 }
 
@@ -102,8 +98,7 @@ body{
 h1{
 	font-size:48px;
 	font-weight: 300;
-	margin-top:30px;
-	margin-bottom:50px;
+	margin:30px 0 50px;
 }
 
 
@@ -114,6 +109,11 @@ h2{
 
 h3{
 	font-size:18px;
+	font-weight: 500;
+}
+
+h4{
+	font-size:14px;
 	font-weight: 500;
 }
 
@@ -133,7 +133,7 @@ a:link {
 a:hover,
 a:active {
 	text-decoration: none;
-	color:lighten(@color, 15%);
+	color:lighten(@color, 12%);
 }
 
 /* ----------  Layout ----------- */
@@ -147,7 +147,7 @@ a:active {
 
 #header .btn-toolbar{
 	width:213px;
-	margin:0px auto;
+	margin:0 auto;
 	padding: 50px;
 }
 
@@ -203,7 +203,7 @@ ul.scribbles li a.btn{
 }
 
 ul.scribbles li a.btn:hover{
-	background: @color;
+	background: darken(@color,8%);
 }
 
 /* Footer */
