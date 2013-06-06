@@ -27,11 +27,11 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
         id:3,
         title: "ColourLove Project, DRY KISS anyone ?",
         date: "27 May"
-    }/*,{
+    },{
         id:4,
         title: "Building the 7 Minute Workout App",
-        date: "30 May"
-    }*/];
+        date: "6 Jun"
+    }];
 
     // Scribble detail
     if($routeParams.scribbleId){
