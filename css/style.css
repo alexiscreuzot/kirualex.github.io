@@ -124,6 +124,12 @@ li,p{
 	line-height: 1.8;
 }
 
+blockquote{
+	font-family: Georgia,'Times New Roman', Times, serif;
+	font-style: italic;
+	font-size: 22px;
+}
+
 a,
 a:link {
 	color: @color;
@@ -230,6 +236,12 @@ ul.scribbles li a.btn:hover{
 	li,p{
 		font-size:16px;
 		font-weight: 300;
+	}
+
+	blockquote{
+		font-family: Georgia,'Times New Roman', Times, serif;
+		font-style: italic;
+		font-size: 18px;
 	}
 
 	/* layout */
