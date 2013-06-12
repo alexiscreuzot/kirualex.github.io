@@ -1,5 +1,3 @@
-@bg: #242222;
-@white: #ECF0F1;
 @color: #1ABC9C;
 
 .myColor { color: @color; }
@@ -19,8 +17,8 @@ body {
 
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
-	color:@white;
-	background: url("../images/shattered.png") @bg;
+	color:#ECF0F1 ;
+	background: url("../images/shattered.png") #242222;
 }
 
 .centered{
@@ -168,7 +166,7 @@ a:active {
 
 #header .btn-toolbar a.btn{
 	padding: 11px 18px 6px;
-	color: @white;
+	color: #ECF0F1 ;
 }
 
 /* Main */
@@ -214,7 +212,7 @@ ul.scribbles li a.btn{
 	padding: 8px 20px;
 	margin-left: 90px;
 	text-align: left;
-	color:@white;
+	color:#ECF0F1 ;
 }
 
 ul.scribbles li a.btn:hover{
