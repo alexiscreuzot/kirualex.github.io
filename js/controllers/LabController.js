@@ -5,7 +5,7 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
 
     // Libs
     $scope.lab_data =
-    [/*{
+    [{
         name:"iOS Apps",
         content:
         [{
@@ -13,10 +13,14 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
             url:"https://itunes.apple.com/app/7-minutes-workout/id650627810?&ls=1&mt=8",
             description:"The perfect assistant to get in shape using the scientific 7-minute Workout, directly on your iPhone"
         }]
-    },*/{
+    },{
         name:"Libraries",
         content:
         [{
+            name:"KAProgressLabel",
+            url:"http://alexiscreuzot.com/KAProgressLabel/",
+            description:"Minimal iOS circular progress library"
+        },{
             name:"KAStatusBar",
             url:"http://alexiscreuzot.com/KAStatusBar/",
             description:"iOS status bar notification/alert library"
