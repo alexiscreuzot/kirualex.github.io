@@ -2,6 +2,9 @@
 
 var myApp = angular.module('myApp', ['ng', 'seo']);
 
+// scroll
+myApp.value('$anchorScroll', angular.noop);
+
 // routes
 myApp.config(function ($routeProvider,$locationProvider){
   $locationProvider.hashPrefix('!');
