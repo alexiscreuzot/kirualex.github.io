@@ -19,6 +19,7 @@ body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	color:#ECF0F1 ;
 	background: url("../images/shattered.png") #242222;
+	background-attachment: fixed;
 }
 
 .centered{
@@ -141,12 +142,15 @@ a:link {
 	color: @color;
 	text-decoration: none;
 	font-weight: 300;
+	padding:2px 4px;
+	border-radius: 3px;
 }
 
 a:hover,
 a:active {
 	text-decoration: none;
-	color:lighten(@color, 12%);
+	color:white;
+	background-color: @color;
 }
 
 /* ----------  Layout ----------- */
