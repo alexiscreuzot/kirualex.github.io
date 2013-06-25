@@ -157,8 +157,8 @@ a:link {
 	border-radius: 3px;
 }
 
-a:hover:not(img),
-a:active {
+a:hover,
+a:active{
 	text-decoration: none;
 	color:white;
 	background-color: @color;
@@ -195,6 +195,7 @@ a.icon{
 
 
 #logo{
+	display: none;
 	position: absolute;
 	margin:40px 0px;
 	opacity: 0.2;
