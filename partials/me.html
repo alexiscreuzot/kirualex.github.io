@@ -1,9 +1,19 @@
-<h1 class="animate from-left" ng-class="{trigger: true}">Hey. I'm Alexis</h1>
+<h1 class="animate from-left" ng-class="{trigger: true}">/me</h1>
 
 <div class="content animate from-right" ng-class="{trigger: true}">
-    <p>I experiment new ideas <a href="{{perso.github}}" target="_blank">on Github</a>. I help and get helped on <a href="{{perso.stack_overflow}}" target="_blank">Stack Overflow</a>.<br/> I scout for great start-up stories <a href="{{perso.hn}}" target="_blank">on Hacker News</a>.<br/>
-     You'll probably find me doing all this with my earbuds on, listening to some sweet tunes on <a href="{{perso.grooveshark}}" target="_blank">Grooveshark</a>.
-     <br/><br/>
-     You can also have a look at my <a href="{{perso.osrc}}" target="_blank">Open Source Report Card</a>.
- </p>
+	<p>I'm <b>Alexis Creuzot</b>, a Mobile Engineer located in Rennes, France
+		<br/>
+		I experiment new ideas <a href="{{perso.github}}" target="_blank">on Github</a>, help and get helped on <a href="{{perso.stack_overflow}}" target="_blank">Stack Overflow</a> and scout for great stories <a href="{{perso.hn}}" target="_blank">on Hacker News</a>. All that listening to some sweet tunes on <a href="{{perso.grooveshark}}" target="_blank">Grooveshark</a>.
+		<p>Oh, and I really like <a href="{{perso.osrc}}" target="_blank">Open Source</a>.<p>
+	</p>
+</div>
+<br/>
+<h1 class="animate from-right" ng-class="{trigger: true}">last scribbles</h1>
+<div class="content animate from-right" ng-class="{trigger: true}" ng-controller="ScribblesController">
+	<ul class="scribbles">
+		<li data-ng-repeat="babble in scribbles | orderBy:'id':true | limitTo:3" >
+			<span class="date">{{babble.date}}</span>
+			<a ng-href="#!/scribble/{{babble.id}}" class="btn">{{babble.title}}</a>
+		</li>
+	</ul>
 </div>

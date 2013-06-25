@@ -1,5 +1,4 @@
-@color: #1ABC9C;
-
+@color: #1AAC8C;
 .myColor { color: @color; }
 
 * {
@@ -17,8 +16,8 @@ body {
 
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
-	color:#ECF0F1 ;
-	background: url("../images/shattered.png") #242222;
+	color:#1c2125 ;
+	background: #E6E6E6;
 }
 
 .centered{
@@ -34,11 +33,11 @@ body{
 
 .btn.btn-primary.active,
 .btn.btn-primary.active:hover{
-	background-color: darken(@color,8%);
+	background-color: darken(@color,7%);
 }
 
 .btn.btn-primary:hover{
-	background-color: lighten(@color,8%);
+	background-color: lighten(@color,7%);
 }
 
 /* ----------  Anims ----------- */
@@ -87,12 +86,13 @@ body{
 /* ----------  Typo ----------- */
 
 ::-moz-selection {
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0.05);
 }
 
 ::selection {
-	background-color: rgba(0,0,0,0.25);
+	background-color: rgba(0,0,0,0.05);
 }
+
 
 h1{
 	font-size:48px;
@@ -102,30 +102,37 @@ h1{
 
 
 h2{
-	font-size:22px;
+	font-size:28px;
 	font-weight: 500;
 }
 
 h3{
-	font-size:18px;
+	font-size:24px;
 	font-weight: 500;
 }
 
 h4{
-	font-size:14px;
+	font-size:18px;
 	font-weight: 500;
 }
 
 li,p{
 	font-size:20px;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 1.8;
+}
+
+p{
+	margin:15px 0;
 }
 
 blockquote{
 	font-family: Georgia,'Times New Roman', Times, serif;
+	background: #F1F1F1;
 	font-style: italic;
 	font-size: 22px;
+	border-left: 5px solid #1c2125;
+	padding: 6px 5px 5px 15px ;
 }
 
 code,pre{
@@ -141,7 +148,7 @@ a:link {
 	color: @color;
 	text-decoration: none;
 	font-weight: 300;
-	padding:2px 4px;
+	padding:1px 4px 3px;
 	border-radius: 3px;
 }
 
@@ -151,6 +158,9 @@ a:active {
 	color:white;
 	background-color: @color;
 }
+a.icon{
+	padding:8px 6px 2px 4px;
+}
 
 /* ----------  Layout ----------- */
 
@@ -159,12 +169,20 @@ a:active {
 	position: relative;
 }
 
+#topline{
+	height:30px;
+}
+
 /* Header */
+
+#header{
+	background: url("../images/shattered.png") #242222;
+}
 
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
-	padding: 50px;
+	padding: 40px;
 }
 
 #header .btn-toolbar a.btn{
@@ -176,10 +194,8 @@ a:active {
 
 #main{
 	padding-bottom: 100px;
-
 	perspective: 600px;
 	perspective-origin: 50% 50%;
-
 	-webkit-perspective: 600px;
 	-webkit-perspective-origin: 50% 50%;
 }
@@ -187,6 +203,10 @@ a:active {
 #main .container{
 	max-width: 890px;
 	padding:0 20px;
+}
+
+ul{
+	list-style-type: square;
 }
 
 /* Scribbles */
@@ -211,15 +231,16 @@ ul.scribbles span{
 
 ul.scribbles li a.btn{
 	font-size: 20px;
-	background: fadeout(black,70%);
+	background:#242222;
 	padding: 8px 20px;
 	margin-left: 90px;
 	text-align: left;
 	color:#ECF0F1 ;
+	border-radius: 5px;
 }
 
 ul.scribbles li a.btn:hover{
-	background: darken(@color,8%);
+	background: @color;
 }
 
 /* Footer */
@@ -235,11 +256,16 @@ ul.scribbles li a.btn:hover{
 
 @media (max-width: 480px) {
 
+	body{
+	color:#E6E6E6 ;
+	background: url("../images/shattered.png") #242222;
+}
+
 	/* typo */
 	h1{
 		font-size:42px;
-		margin-top:20px;
-		margin-bottom:30px;
+		margin-top:10px;
+		margin-bottom:20px;
 	}
 
 	li,p{
@@ -253,8 +279,12 @@ ul.scribbles li a.btn:hover{
 		font-size: 18px;
 	}
 
-
 	/* layout */
+
+	#topline{
+		height:0px;
+	}
+
 	#main .container{
 		padding:60px 10px 30px;
 	}
@@ -264,7 +294,7 @@ ul.scribbles li a.btn:hover{
 		width:100%;
 		background-color: @color;
 		text-align: center;
-		padding: 0px;
+		padding: 0;
 		position:fixed;
 		z-index: 9999;
 	}
@@ -288,9 +318,7 @@ ul.scribbles li a.btn:hover{
 	}
 
 	ul.scribbles span{
-
 		width: 60px;
-
 	}
 
 }
