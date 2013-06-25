@@ -35,6 +35,10 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
         id:5,
         title: "Circular progress with KAProgressLabel",
         date: "12 Jun"
+    },{
+        id:6,
+        title: "You're the only one seeing this page",
+        date: "25 Jun"
     }];
 
     // Scribble detail

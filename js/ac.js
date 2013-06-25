@@ -42,8 +42,6 @@ var Graphy = (function() {
 
         if(i==0){
             path += "M"+0+","+curY;
-        }else if(i==(length -1)){
-            path += ","+w+","+curY;
         }else{
             x += Math.round(w/length);
             y = curY;
