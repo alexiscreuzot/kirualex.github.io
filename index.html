@@ -9,8 +9,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-	<meta http-equiv="content-script-type" content="text/javascript" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keyword" content="alexis, creuzot, ios, engineer, france"/>
 
   <!-- Icons -->
@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
   <link rel="apple-touch-startup-image" href="images/default.png" />
 
-	<!-- Stylesheet -->
+  <!-- Stylesheet -->
   <link href='//fonts.googleapis.com/css?family=Lato:200,300,500' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/libs/font-awesome.min.css">
@@ -33,12 +33,18 @@
 <body ng-controller="AppController">
   <div id="page">
     <div id="topline"></div>
+
     <div id="header">
-      <div class="btn-toolbar">
-        <div class="btn-group">
-          <a data-ng-repeat="menu in menus" class="btn btn-primary" ng-class="{active: routeIs('/{{menu.link}}')}" ng-href="#!/{{menu.link}}" onClick="Graphy.animate(150);_gaq.push(['_trackEvent', '{{menu.link}}', 'pageview', '']);">
-            <i class="icon-{{menu.icon}} icon-large"></i>
-          </a>
+      <div class="container">
+
+        <div id="logo" onClick="location.href='#!'" ng-class="{not_home: !routeIs('/')}"><img src="images/logo2.png" /></div>
+
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <a data-ng-repeat="menu in menus" class="btn btn-primary" ng-class="{active: routeIs('/{{menu.link}}')}" ng-href="#!/{{menu.link}}" onClick="Graphy.animate(150);_gaq.push(['_trackEvent', '{{menu.link}}', 'pageview', '']);">
+              <i class="icon-{{menu.icon}} icon-large"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>

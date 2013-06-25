@@ -37,7 +37,7 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
         date: "12 Jun"
     },{
         id:6,
-        title: "You're the only one seeing this page",
+        title: "You are the only one seeing this page",
         date: "25 Jun"
     }];
 

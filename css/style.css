@@ -11,7 +11,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
-	text-rendering: optimizeLegibility; 
+	text-rendering: optimizeLegibility;
 }
 
 body{
@@ -179,6 +179,23 @@ a.icon{
 	background: url("../images/shattered.png") #242222;
 }
 
+.container #logo{
+	position: absolute;
+	margin:40px 20px;
+	opacity: 0.2;
+	cursor: pointer;
+
+	transition: .5s;
+	-webkit-transition: .5s;
+	transition-property: opacity;
+	-webkit-transition-property: opacity;
+}
+
+.container #logo.not_home{
+
+	opacity: 1;
+}
+
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
@@ -285,6 +302,10 @@ ul.scribbles li a.btn:hover{
 
 	#topline{
 		height:0px;
+	}
+
+	.container #logo{
+		display: none;
 	}
 
 	#main .container{
