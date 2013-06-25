@@ -217,7 +217,7 @@ a.icon{
 	-webkit-perspective-origin: 50% 50%;
 }
 
-#main .container{
+.container{
 	max-width: 890px;
 	padding:0 20px;
 }
