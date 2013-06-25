@@ -1,4 +1,4 @@
-@color: #1AAC8C;
+@color: #3a9ea6;
 .myColor { color: @color; }
 
 * {
@@ -17,7 +17,7 @@ body {
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	color:#1c2125 ;
-	background: #E6E6E6;
+	background: #ECECEC;
 }
 
 .centered{
