@@ -169,6 +169,10 @@ a.icon{
 	position: relative;
 }
 
+.container{
+	max-width: 890px;
+}
+
 #topline{
 	height:30px;
 }
@@ -179,11 +183,8 @@ a.icon{
 	background: url("../images/shattered.png") #242222;
 }
 
-#header .container{
-	max-width: 890px;
-}
 
-#header .container #logo{
+#logo{
 	position: absolute;
 	margin:40px 0px;
 	opacity: 0.2;
@@ -222,7 +223,6 @@ a.icon{
 }
 
 #main .container{
-	max-width: 890px;
 	padding:0 20px;
 }
 
