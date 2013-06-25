@@ -179,9 +179,13 @@ a.icon{
 	background: url("../images/shattered.png") #242222;
 }
 
-.container #logo{
+#header .container{
+	max-width: 890px;
+}
+
+#header .container #logo{
 	position: absolute;
-	margin:40px 20px;
+	margin:40px 0px;
 	opacity: 0.2;
 	cursor: pointer;
 
@@ -217,7 +221,7 @@ a.icon{
 	-webkit-perspective-origin: 50% 50%;
 }
 
-.container{
+#main .container{
 	max-width: 890px;
 	padding:0 20px;
 }
