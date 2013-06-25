@@ -6,12 +6,20 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
     // Libs
     $scope.lab_data =
     [{
-        name:"iOS Apps",
+        name:"Mobile Apps",
         content:
         [{
             name:"7 minute Workout",
             url:"https://itunes.apple.com/app/7-minutes-workout/id650627810?&ls=1&mt=8",
             description:"The perfect assistant to get in shape using the scientific 7-minute Workout, directly on your iPhone"
+        }]
+    },{
+        name:"Web",
+        content:
+        [{
+            name:"grinderlabs.com",
+            url:"http://grinderlabs.com/",
+            description:"A serverless website made for a good friend & colegue, Jérémy Paul. Images and videos are fetched directly from Flickr and Vimeo API using JQuery."
         }]
     },{
         name:"Libraries",
@@ -38,7 +46,7 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
             description:"Ease up iOS Nib management and improve app maintanability"
         }]
     },{
-        name:"Projects",
+        name:"Other",
         content:
         [{
             name:"ColourLove",
