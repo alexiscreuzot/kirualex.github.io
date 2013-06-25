@@ -132,7 +132,7 @@ blockquote{
 	font-style: italic;
 	font-size: 22px;
 	border-left: 5px solid #1c2125;
-	padding: 6px 5px 5px 15px ;
+	padding: 1px 5px 15px 15px !important;
 }
 
 code,pre{
@@ -277,6 +277,8 @@ ul.scribbles li a.btn:hover{
 		font-family: Georgia,'Times New Roman', Times, serif;
 		font-style: italic;
 		font-size: 18px;
+		border-left: 5px solid #AAA;
+		background: fadeout(#1c2125,60%);
 	}
 
 	/* layout */
