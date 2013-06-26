@@ -42,10 +42,12 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
     }];
 
     // Scribble detail
-    if($routeParams.scribbleId){
+    if($routeParams.slug){
         Graphy.startLoading(120);
-        $scope.scribble = $scope.scribbles[$routeParams.scribbleId];
-        $http.get('scribbles/'+$routeParams.scribbleId+'.md').success(function(data) {
+        $scope.scribble = $.grep($scope.scribbles,
+            function(s){return $scope.slug(s.title) == $routeParams.slug || s.id == $routeParams.slug ; })[0];
+
+        $http.get('scribbles/'+$scope.scribble.id+'.md').success(function(data) {
           var dataToParse = {text:data};
 
           $http({method: 'POST', url: 'https://api.github.com/markdown', data:angular.toJson(dataToParse), timeout:10*1000}).

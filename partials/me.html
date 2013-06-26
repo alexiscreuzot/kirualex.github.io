@@ -11,9 +11,9 @@
 <h2 class="animate from-right" ng-class="{trigger: true}">Last scribbles</h2>
 <div class="content animate from-right" ng-class="{trigger: true}" ng-controller="ScribblesController">
 	<ul class="scribbles">
-		<li data-ng-repeat="babble in scribbles | orderBy:'id':true | limitTo:3" >
-			<span class="date">{{babble.date}}</span>
-			<a ng-href="#!/scribble/{{babble.id}}" class="btn">{{babble.title}}</a>
+		<li data-ng-repeat="s in scribbles | orderBy:'id':true | limitTo:3" >
+			<span class="date">{{s.date}}</span>
+			<a ng-href="#!/scribble/{{slug(s.title)}}" class="btn">{{s.title}}</a>
 		</li>
 	</ul>
 </div>
