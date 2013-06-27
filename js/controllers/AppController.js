@@ -14,8 +14,6 @@ myApp.controller('AppController', function($scope, $location) {
 			return $location.path() === routeName;
 		};
 
-		$scope.siteTitle = "Alexis Creuzot";
-
 		$scope.menus =
 		[{link:"", icon:"user"},
 		{link:"lab", icon:"beaker"},
