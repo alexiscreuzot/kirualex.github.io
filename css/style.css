@@ -132,12 +132,21 @@ p{
 }
 
 blockquote{
-	font-family: Georgia,'Times New Roman', Times, serif;
-	background: #F1F1F1;
+	font-family: Georgia, Times, serif;
+	background: #EFEFEF;
 	font-style: italic;
 	font-size: 22px;
-	border-left: 5px solid #1c2125;
+	font-weight: 300;
+	border-left: 5px solid @color;
 	padding: 1px 5px 15px 15px !important;
+}
+
+blockquote p:before {
+	content: open-quote;
+	font-weight: bold;
+	font-size: 3em;
+	vertical-align:-.2em;
+	margin-right: 10px;
 }
 
 code,pre{
@@ -162,6 +171,11 @@ a:active{
 	text-decoration: none;
 	color:white;
 	background-color: @color;
+}
+
+a[href*="akamai"]:hover,
+a[href*="akamai"]:active {
+	display:none;
 }
 
 a.anchor{
@@ -208,7 +222,6 @@ a.icon{
 }
 
 .container #logo.not_home{
-
 	opacity: 1;
 }
 
@@ -236,6 +249,7 @@ a.icon{
 #main .container{
 	padding:0 20px;
 }
+
 
 ul{
 	list-style-type: square;
@@ -275,6 +289,19 @@ ul.scribbles li a.btn:hover{
 	background: @color;
 }
 
+
+.scribble{
+	width: 700px;
+	margin:auto;
+}
+
+.scribble h1{
+	font-size:40px;
+	font-weight: 500;
+	margin:20px 0 30px;
+}
+
+
 /* Footer */
 
 #footer{
@@ -289,9 +316,9 @@ ul.scribbles li a.btn:hover{
 @media (max-width: 480px) {
 
 	body{
-	color:#E6E6E6 ;
-	background: url("../images/shattered.png") #242222;
-}
+		color:#E6E6E6 ;
+		background: url("../images/shattered.png") #242222;
+	}
 
 	/* typo */
 	h1{
@@ -325,6 +352,11 @@ ul.scribbles li a.btn:hover{
 
 	#main .container{
 		padding:60px 10px 30px;
+	}
+
+	.scribble{
+		width: 720px;
+		margin:auto;
 	}
 
 	/* Menu */
