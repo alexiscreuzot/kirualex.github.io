@@ -47,6 +47,8 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams, $lo
         $scope.scribble = $.grep($scope.scribbles,
             function(s){return $scope.slug(s.title) == $routeParams.slug || s.id == $routeParams.slug ; })[0];
 
+        $scope.siteTitle = $scope.scribble.title;
+
         $http.get('scribbles/'+$scope.scribble.id+'.md').success(function(data) {
           var dataToParse = {text:data};
 
@@ -71,7 +73,6 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams, $lo
               e.preventDefault();
               window.open('http://facebook.com/sharer.php?u=' + escape(loc), 'twitterwindow', windowFeatures);
           });
-
 
             $scope.scribble.content = parsedData;
               $('.article').addClass('trigger'); // anim
