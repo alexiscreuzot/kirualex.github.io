@@ -182,8 +182,10 @@ a.anchor{
 	display: none;
 }
 
-a.icon{
+a.back{
+	position:absolute;
 	padding:8px 6px 2px 4px;
+	left:15px;
 }
 
 /* ----------  Layout ----------- */
@@ -291,7 +293,8 @@ ul.scribbles li a.btn:hover{
 
 
 .scribble{
-	width: 700px;
+	max-width: 700px;
+	padding:0 30px;
 	margin:auto;
 }
 
@@ -340,6 +343,10 @@ ul.scribbles li a.btn:hover{
 		background: fadeout(#1c2125,60%);
 	}
 
+	a.back{
+		position: relative;
+	}
+
 	/* layout */
 
 	#topline{
@@ -355,8 +362,9 @@ ul.scribbles li a.btn:hover{
 	}
 
 	.scribble{
-		width: 720px;
+		width: auto;
 		margin:auto;
+		padding: 0;
 	}
 
 	/* Menu */
