@@ -35,17 +35,14 @@ var Graphy = (function() {
     var length = Math.round(w/8);
     var path = "";
     var   x = 0;
-    var   y = 0;
 
     for (var i = 0; i < length; i++) {
         curY = Math.round(Math.random() * (h-padding));
-
         if(i==0){
-            path += "M"+0+","+curY;
+            path = "M"+0+","+curY;
         }else{
             x += Math.round(w/length);
-            y = curY;
-            path += "," + [x, y];
+            path += "," + [x, curY];
         }
     }
     return path;
