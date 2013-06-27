@@ -1,7 +1,7 @@
 'use strict';
 
 // declare controller to myApp
-myApp.controller('ScribblesController',function($scope, $http, $routeParams){
+myApp.controller('ScribblesController',function($scope, $http, $routeParams, $location){
 
     // Init error page
     var error_page;
@@ -52,17 +52,38 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams){
 
           $http({method: 'POST', url: 'https://api.github.com/markdown', data:angular.toJson(dataToParse), timeout:10*1000}).
           success(function(parsedData, status, headers, config) {
+
+            var loc = $location.absUrl();
+            var title  = $scope.scribble.title;
+            var windowFeatures = 'height=450, width=550, top='+($(window).height()/2 - 225)
+            +', left='+$(window).width()/2
+            +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0';
+
+            // Twitter
+            $('a.tweet').click(function(e){
+              e.preventDefault();
+              window.open('http://twitter.com/share?url=' + escape(loc)
+                + '&text=' + escape(title) , 'twitterwindow', windowFeatures);
+          });
+
+            // Fb
+            $('a.facebook').click(function(e){
+              e.preventDefault();
+              window.open('http://facebook.com/sharer.php?u=' + escape(loc), 'twitterwindow', windowFeatures);
+          });
+
+
             $scope.scribble.content = parsedData;
               $('.article').addClass('trigger'); // anim
               Graphy.stopLoading();
           }).
-          error(function(data, status, headers, config) {
-            $scope.scribble.content = error_page;
+error(function(data, status, headers, config) {
+    $scope.scribble.content = error_page;
             $('.article').addClass('trigger'); // anim
             Graphy.stopLoading();
         });
-      });
-    }
+});
+}
 
 
 

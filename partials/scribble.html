@@ -3,5 +3,15 @@
     <a class="back" href="#!/scribbles"><i class="icon-mail-reply icon-large"></i></a>
     <h1 class="animate from-left" ng-class="{trigger: true}">{{scribble.title}}</h1>
 
-    <div class="article animate from-right"  ng-bind-html-unsafe="scribble.content"></div>
+    <div class="article animate from-right" >
+
+        <div class="article-content"  ng-bind-html-unsafe="scribble.content"></div>
+        <div class="article-footer">
+            <div class="share">
+                <a class="tweet"><i class="icon-twitter icon-large"></i></a>
+                <a class="facebook"><i class="icon-facebook icon-large"></i></a>
+            </div>
+        </div>
+    </div>
+
 </div>

@@ -158,15 +158,13 @@ a:link {
 	border-radius: 3px;
 }
 
-a:hover,
-a:active{
+a:hover{
 	text-decoration: none;
 	color:white;
 	background-color: @color;
 }
 
-a[href*="akamai"]:hover,
-a[href*="akamai"]:active {
+a[href*="akamai"]:hover{
 	display:none;
 }
 
@@ -294,6 +292,33 @@ ul.scribbles li a.btn:hover{
 	font-weight: 500;
 	margin:20px 0 30px;
 }
+
+/* Footer */
+
+.article-footer{
+	background: none;
+}
+
+.share{
+	width: 100px;
+	background: none;
+	float : right;
+}
+
+.share a{
+	color: #AAA;
+	text-decoration: none;
+	border:none;
+	cursor: pointer;
+	border-radius: 0px;
+	padding: 10px;
+}
+
+.share a:hover{
+	color: #333;
+	background: none;
+}
+
 
 /* Footer */
 
