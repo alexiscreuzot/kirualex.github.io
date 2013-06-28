@@ -5,7 +5,7 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams, $lo
 
     // Init error page
     var error_page;
-    $http.get('partials/error.html').success(function(data) {
+    $http.get('app/partials/error.html').success(function(data) {
       error_page = data;
   });
 
