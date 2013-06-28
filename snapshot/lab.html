@@ -1,12 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" class="ng-scope"><head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" ng-controller="AppController" class="ng-scope"><head>
 	<title>Alexis Creuzot</title>
+
+  <!-- Metas -->
   <meta name="fragment" content="!">
-  <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0">
+  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<meta http-equiv="content-script-type" content="text/javascript">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-script-type" content="text/javascript">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="keyword" content="alexis, creuzot, ios, engineer, france">
 
   <!-- Icons -->
@@ -14,15 +16,17 @@
   <link rel="apple-touch-icon-precomposed" href="images/icon.png">
   <link rel="apple-touch-startup-image" href="images/default.png">
 
-	<!-- Stylesheet -->
-  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,500" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Stylesheet -->
+  <link href="//fonts.googleapis.com/css?family=Lato:200,300,500" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/flat-ui.css" type="text/css" media="screen">
-  <link rel="stylesheet/less" href="css/layout.css" type="text/css" media="screen"><style type="text/css" media="screen" id="less:css-layout">.myColor {
-  color: #1abc9c;
+  <link rel="stylesheet" href="css/libs/font-awesome.min.css">
+  <link rel="stylesheet" href="css/libs/bootstrap.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/libs/bootstrap-responsive.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/libs/flat-ui.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/libs/markdown.css" type="text/css" media="screen">
+
+  <link rel="stylesheet/less" href="css/style.css" type="text/css" media="screen"><style type="text/css" media="screen" id="less:css-style">.myColor {
+  color: #3a9ea6;
 }
 * {
   -webkit-touch-callout: none;
@@ -32,107 +36,250 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 95%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+}
+body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  background: url("http://flatangle.dev/css/../images/shattered.png") #242222;
-  color: #ecf0f1;
+  color: #1c2125 ;
+  background: #ECECEC;
 }
-#topline {
-  width: 100%;
-  height: 5px;
-  background: rgba(0, 0, 0, 0);
-  -webkit-transition: background 0.5s linear;
+hr {
+  border-top: none;
+  border-bottom: 1px solid #CCC;
 }
-#topline.admin {
-  background: #28e1bd;
-}
-.hidden {
-  display: none;
+.centered {
+  margin: auto;
+  text-align: center;
 }
 /* ----------  Buttons ----------- */
 .btn.btn-primary {
-  background-color: #1abc9c;
+  background-color: #3a9ea6;
 }
 .btn.btn-primary.active,
 .btn.btn-primary.active:hover {
-  background-color: #15987e;
+  background-color: #31858c;
 }
 .btn.btn-primary:hover {
-  background-color: #28e1bd;
+  background-color: #46b5be;
+}
+/* ----------  Anims ----------- */
+.animate {
+  transition: .5s;
+  -webkit-transition: .5s;
+  opacity: 0;
+}
+.animate.from-left {
+  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+}
+.animate.from-right {
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+}
+.animate.from-top {
+  transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+}
+.animate.from-bottom {
+  transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+}
+.animate.from-far {
+  transform: translateZ(-20px);
+  -webkit-transform: translateZ(-20px);
+}
+.animate.from-near {
+  transform: translateZ(20px);
+  -webkit-transform: translateZ(20px);
+}
+.animate.trigger {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 /* ----------  Typo ----------- */
 ::-moz-selection {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 ::selection {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 h1 {
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 300;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  -webkit-transition: .5s;
-  -webkit-transform: translatex(-10px);
-  opacity: 0;
-}
-h1.displayed {
-  -webkit-transform: translateZ(0);
-  opacity: 1;
+  margin: 30px 0 50px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 18px;
   font-weight: 500;
 }
 li,
 p {
   font-size: 20px;
-  font-weight: 200;
-  line-height: 1.5;
+  font-weight: 300;
+  line-height: 1.8;
+}
+p {
+  margin: 15px 0;
+}
+blockquote {
+  font-family: Georgia, Times, serif;
+  background: #EFEFEF;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 300;
+  border-left: 5px solid #3a9ea6;
+  padding: 1px 5px 15px 15px !important;
+}
+blockquote p:before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 3em;
+  vertical-align: -0.2em;
+  margin-right: 10px;
 }
 a,
 a:link {
-  color: #1abc9c;
+  color: #3a9ea6;
   text-decoration: none;
   font-weight: 300;
+  padding: 1px 4px 3px;
+  border-radius: 3px;
 }
-a:hover,
-a:active {
+a:hover {
   text-decoration: none;
-  color: #3ee4c4;
+  color: white;
+  background-color: #3a9ea6;
+}
+a[href*="akamai"]:hover {
+  display: none;
+}
+a.anchor {
+  display: none;
+}
+a.back {
+  position: absolute;
+  padding: 8px 6px 2px 4px;
+  left: 15px;
 }
 /* ----------  Layout ----------- */
 #page {
   min-height: 100%;
   position: relative;
 }
+.container {
+  max-width: 890px;
+}
+#topline {
+  height: 30px;
+}
 /* Header */
+#header {
+  background: url("http://flatangle.dev/css/../images/shattered.png") #242222;
+}
+#logo {
+  position: absolute;
+  margin: 40px 0px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: .5s;
+  -webkit-transition: .5s;
+  transition-property: opacity;
+  -webkit-transition-property: opacity;
+}
+.container #logo.not_home {
+  opacity: 1;
+}
 #header .btn-toolbar {
   width: 213px;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 40px;
 }
 #header .btn-toolbar a.btn {
   padding: 11px 18px 6px;
-  color: #ecf0f1;
+  color: #ECF0F1 ;
 }
 /* Main */
 #main {
   padding-bottom: 100px;
+  perspective: 600px;
+  perspective-origin: 50% 50%;
   -webkit-perspective: 600px;
   -webkit-perspective-origin: 50% 50%;
 }
 #main .container {
-  max-width: 890px;
   padding: 0 20px;
 }
-#main .content {
-  opacity: 0;
-  -webkit-transition: .5s;
-  -webkit-transform: translateX(10px);
+ul {
+  list-style-type: square;
 }
-#main .content.displayed {
-  opacity: 1;
-  -webkit-transform: translateX(0);
+/* Scribbles */
+ul.scribbles {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.scribbles li {
+  padding: 12px 0;
+}
+ul.scribbles span {
+  position: absolute;
+  text-align: right;
+  width: 70px;
+  display: block;
+  padding-top: 4px;
+}
+ul.scribbles li a.btn {
+  font-size: 20px;
+  background: #242222;
+  padding: 8px 20px;
+  margin-left: 90px;
+  text-align: left;
+  color: #ECF0F1 ;
+  border-radius: 5px;
+}
+ul.scribbles li a.btn:hover {
+  background: #3a9ea6;
+}
+.scribble {
+  max-width: 700px;
+  padding: 0 40px;
+  margin: auto;
+}
+.scribble h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 20px 0 30px;
+}
+/* Footer */
+.article-footer {
+  background: none;
+}
+.share {
+  width: 100px;
+  background: none;
+  float: right;
+}
+.share a {
+  color: #AAA;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  padding: 10px;
+}
+.share a:hover {
+  color: #333;
+  background: none;
 }
 /* Footer */
 #footer {
@@ -141,70 +288,143 @@ a:active {
   position: absolute;
   bottom: 0;
 }
-/* Articles */
-.article .separator {
-  width: 20px;
-  margin: 40px auto;
-  color: #1abc9c;
-}
-/* ----------  Mobile ----------- */
+/* ------------------- Mobile CSS ------------------------*/
 @media (max-width: 480px) {
+  body {
+    color: #E6E6E6 ;
+    background: url("http://flatangle.dev/css/../images/shattered.png") #242222;
+  }
+  /* typo */
   h1 {
-    font-size: 44px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   li,
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
   }
+  blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 18px;
+    background: rgba(28, 33, 37, 0.4);
+  }
+  a.back {
+    position: relative;
+  }
+  /* layout */
+  #topline {
+    height: 0px;
+  }
+  .container #logo {
+    display: none;
+  }
+  #main .container {
+    padding: 60px 10px 30px;
+  }
+  .scribble {
+    width: auto;
+    margin: auto;
+    padding: 0;
+  }
+  /* Menu */
   #header .btn-toolbar {
-    margin: 30px auto;
+    width: 100%;
+    background-color: #3a9ea6;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    z-index: 9999;
+  }
+  #header .btn-toolbar .btn-group {
+    width: 213px;
+    margin: 0 auto;
+  }
+  .btn-group > .btn:first-of-type,
+  .btn-group > .btn:last-of-type {
+    border-radius: 0;
+  }
+  /* Scribbles */
+  ul.scribbles li a.btn {
+    font-size: 16px;
+    padding: 6px 14px;
+    font-weight: 300;
+    margin-left: 70px;
+  }
+  ul.scribbles span {
+    width: 60px;
   }
 }
 </style>
-
 <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style></head>
-<body ng-controller="AppController" class="ng-scope">
-  <div id="topline" ng-class="{admin: routeIs('/admin')}"></div>
+
+<body>
   <div id="page">
+    <div id="topline"></div>
+
     <div id="header">
-      <div class="btn-toolbar">
-        <div class="btn-group">
-          <!-- ngRepeat: menu in menus --><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/')}" href="#!/" onclick="graphy()">
-            <i class="icon-user icon-large"></i>
-          </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope active" ng-class="{active: routeIs('/lab')}" href="#!/lab" onclick="graphy()">
-            <i class="icon-beaker icon-large"></i>
-          </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/scribbles')}" href="#!/scribbles" onclick="graphy()">
-            <i class="icon-bookmark icon-large"></i>
-          </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/contact')}" href="#!/contact" onclick="graphy()">
-            <i class="icon-envelope-alt icon-large"></i>
-          </a>
+      <div class="container">
+
+        <!--div id="logo" onClick="location.href='#!'" ng-class="{not_home: !routeIs('/')}">
+          <img src="images/logo2.png" />
+        </div-->
+
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <!-- ngRepeat: menu in menus --><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/')}" ng-href="#!/" onclick="Graphy.animate(150);_gaq.push(['_trackEvent', '', 'pageview', '']);" href="#!/">
+              <i class="icon-user icon-large"></i>
+            </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope active" ng-class="{active: routeIs('/lab')}" ng-href="#!/lab" onclick="Graphy.animate(150);_gaq.push(['_trackEvent', 'lab', 'pageview', '']);" href="#!/lab">
+              <i class="icon-beaker icon-large"></i>
+            </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/scribbles')}" ng-href="#!/scribbles" onclick="Graphy.animate(150);_gaq.push(['_trackEvent', 'scribbles', 'pageview', '']);" href="#!/scribbles">
+              <i class="icon-bookmark icon-large"></i>
+            </a><a data-ng-repeat="menu in menus" class="btn btn-primary ng-scope" ng-class="{active: routeIs('/contact')}" ng-href="#!/contact" onclick="Graphy.animate(150);_gaq.push(['_trackEvent', 'contact', 'pageview', '']);" href="#!/contact">
+              <i class="icon-envelope-alt icon-large"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
     <div id="main">
-      <div class="container" data-ng-view=""><h1 ng-class="{displayed: true}" class="ng-scope displayed">/lab</h1>
-<div class="content ng-scope displayed" ng-class="{displayed: true}">
+      <div class="container" data-ng-view=""><h1 class="animate from-left ng-scope trigger" ng-class="{trigger: true}">/lab</h1>
 
+<div class="content animate from-right ng-scope trigger" ng-class="{trigger: true}">
     <!-- ngRepeat: category in lab_data --><div data-ng-repeat="category in lab_data" class="ng-scope">
+        <h2 class="ng-binding">Mobile Apps</h2>
+        <ul>
+           <!-- ngRepeat: item in category.content --><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="https://itunes.apple.com/app/7-minutes-workout/id650627810?&amp;ls=1&amp;mt=8" target="_blank" class="ng-binding">7 minute Workout</a>
+            <br>The perfect assistant to get in shape using the scientific 7-minute Workout, directly on your iPhone</li>
+        </ul>
+    </div><div data-ng-repeat="category in lab_data" class="ng-scope">
+        <h2 class="ng-binding">Web</h2>
+        <ul>
+           <!-- ngRepeat: item in category.content --><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="http://grinderlabs.com/" target="_blank" class="ng-binding">grinderlabs.com</a>
+            <br>A serverless website made for a good friend &amp; colegue, Jérémy Paul. Images and videos are fetched directly from Flickr and Vimeo API using JQuery.</li>
+        </ul>
+    </div><div data-ng-repeat="category in lab_data" class="ng-scope">
         <h2 class="ng-binding">Libraries</h2>
         <ul>
            <!-- ngRepeat: item in category.content --><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
-            <a href="http://kirualex.github.io/KALayoutHelper" target="_blank" class="ng-binding">KALayoutHelper</a>
-            <br>A work in progress aiming to add a layout mecanism (similar to android) to views in iOS</li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
-            <a href="http://kirualex.github.io/KASlideShow" target="_blank" class="ng-binding">KASlideShow</a>
-            <br>Light slideshow library for iOS </li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
-            <a href="http://kirualex.github.io/KANibHelper" target="_blank" class="ng-binding">KANibHelper</a>
+            <a href="http://alexiscreuzot.com/KAProgressLabel/" target="_blank" class="ng-binding">KAProgressLabel</a>
+            <br>Minimal iOS circular progress library</li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="http://alexiscreuzot.com/KAStatusBar/" target="_blank" class="ng-binding">KAStatusBar</a>
+            <br>iOS status bar notification/alert library</li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="http://alexiscreuzot.com/KALayoutHelper" target="_blank" class="ng-binding">KALayoutHelper</a>
+            <br>A work in progress aiming to add a layout mechanism (similar to android) to views in iOS</li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="http://alexiscreuzot.com/KASlideShow" target="_blank" class="ng-binding">KASlideShow</a>
+            <br>Simple slideshow library for iOS </li><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
+            <a href="http://alexiscreuzot.com/KANibHelper" target="_blank" class="ng-binding">KANibHelper</a>
             <br>Ease up iOS Nib management and improve app maintanability</li>
         </ul>
     </div><div data-ng-repeat="category in lab_data" class="ng-scope">
-        <h2 class="ng-binding">Projects</h2>
+        <h2 class="ng-binding">Other</h2>
         <ul>
            <!-- ngRepeat: item in category.content --><li data-ng-repeat="item in category.content" class="ng-scope ng-binding">
-            <a href="http://kirualex.github.io/ColourLove" target="_blank" class="ng-binding">ColourLove</a>
+            <a href="http://alexiscreuzot.com/ColourLove" target="_blank" class="ng-binding">ColourLove</a>
             <br>This project only purpose is to provide brief, clean and readable code in a dummy application. It is heavily library based and MVC oriented and shows mecanisms like downloading, storing and displaying data from a webservice.</li>
         </ul>
     </div>
@@ -212,23 +432,25 @@ a:active {
     </div>
 
     <div id="footer">
-      <div id="holder" style="width:150px;height:25px; margin:75px auto 0px;"><svg height="25" version="1.1" width="150" xmlns="http://www.w3.org/2000/svg" style="overflow-x: hidden; overflow-y: hidden; position: relative; "><desc>Created with Raphaël 2.1.0</desc><defs></defs><path style="opacity: 1; " fill="none" stroke="#1abc9c" d="M0,13L8,1L16,14L24,16L32,17L40,12L48,18L56,19L64,18L72,10L80,3L88,6L96,15L104,5L112,5L120,4L128,4L136,19L150,13" opacity="1"></path></svg></div>
+      <div id="holder" style="width:150px;height:25px; margin:60px auto;"><svg height="25" version="1.1" width="150" xmlns="http://www.w3.org/2000/svg" style="overflow-x: hidden; overflow-y: hidden; position: relative; "><desc>Created with Raphaël 2.1.0</desc><defs></defs><path style="opacity: 1; " fill="none" stroke="#3a9ea6" d="M0,19L8,10L16,6L24,6L32,6L40,5L48,15L56,0L64,12L72,19L80,16L88,5L96,5L104,12L112,18L120,12L128,14L136,18L144,3" opacity="1"></path></svg></div>
     </div>
   </div>
 
-
+  <!-- Scripts -->
+  <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script src="js/libs/lesscss.js" type="text/javascript"></script>
+  <script src="js/libs/jquery-1.6.2.min.js"></script>
   <script src="js/libs/angular-1.1.4.js"></script>
   <script src="js/libs/angular-seo.js"></script>
-  <script src="js/libs/lesscss.js" type="text/javascript"></script>
-  <script src="js/libs/jquery-1.6.2.min.js"></script>
-  <script src="js/libs/raphael.js"></script>
-
-  <script src="js/libs/fokus.min.js"></script>
-  <script src="js/libs/infographics.js"></script>
 
   <script src="js/app.js"></script>
   <script src="js/controllers/AppController.js"></script>
   <script src="js/controllers/MainController.js"></script>
+  <script src="js/controllers/LabController.js"></script>
+  <script src="js/controllers/ScribblesController.js"></script>
+
+  <script src="js/libs/fokus.min.js"></script>
+  <script src="js/libs/raphael.js"></script>
+  <script src="js/ac.js"></script>
 
 
 </body></html>
