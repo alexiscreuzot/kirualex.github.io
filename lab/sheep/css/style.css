@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body,html{
+	width:100%;
+	background:url('../img/bg.png') repeat;
+	margin:0;
+	padding:0;
+	
+	-webkit-appearance: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	text-align:center;
+}
+
+
+.top{
+	width:100%;
+	height:100px;
+	background-color: #b6ad9c;
+	text-align: center;
+}
+
+h1{
+	padding:0;
+	margin:0;
+	font-family : 'Amatic SC', Georgia, serif;
+	font-size: 72px;
+	color: #fff ;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+	font-weight: 600;
+	display:inline;
+}
+
+.container{
+	margin-top:-10px;
+	width:354px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom:20px;
+}
+
+.sheep_on{
+	position:absolute;
+	margin-top:1px;
+	width:354px;
+	height:430px;
+	background:url('../img/sheep_on.png') no-repeat;
+}
+
+.sheep_off{
+	position:absolute;
+	width:354px;
+	height:430px;
+	background:url('../img/sheep_off.png') no-repeat;
+}
+
+
+button.bam {
+	cursor:pointer;
+	border:0;
+	margin: 440px auto 10px;
+	width:224px;
+	height:234px;
+	background:url('../img/button_off.png') no-repeat;
+}
+
+button.bam:active{
+	width:209px;
+	height:224px;
+	background:url('../img/button_on.png') no-repeat;
+}

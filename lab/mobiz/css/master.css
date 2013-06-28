@@ -1,0 +1,73 @@
+
+body{
+  background:url(../images/back.png) repeat;
+}
+
+#logo{
+	background:url(../images/logo.png) no-repeat;
+	margin: 10px auto 80px auto;
+	width: 721px;
+	height:215px;
+}
+
+
+ul#menu{
+  list-style-type:none;
+  margin-left:-80px;
+}
+
+
+a:link, a:active, a:visited {
+	color : #3E3E3E;
+	text-decoration : none !important;
+}
+
+a:hover, a.selected{
+color : #f28c13;
+}
+
+ul#menu li  a{
+ content:"";
+ float:left;
+ width:192px;
+ height:160px;
+ background:url(../images/menu.png);
+
+-webkit-transition-property: background;
+-webkit-transition-timing-function: ease-in-out;
+ -webkit-transition-duration: 400ms;
+}
+
+ul#menu li a span{
+position : absolute;
+margin-top: 165px;
+font-family : Arial, sans-serif;
+font-size : 12px;
+text-transform : uppercase;
+}
+
+ul#menu li.conception     a{background-position: 0 0; }
+ul#menu li.conception     a:hover, 
+ul#menu li.conception     a.selected{background-position: 0 bottom; }
+ul#menu li.conception     span{margin-left: 80px; }
+
+ul#menu li.conseil        a{background-position: -192px 0; }
+ul#menu li.conseil        a:hover, 
+ul#menu li.conseil        a.selected{background-position: -192px bottom; }
+ul#menu li.conseil        span{margin-left: 80px; }
+
+ul#menu li.developement   a{background-position: -384px 0; }
+ul#menu li.developement   a:hover, 
+ul#menu li.developement   a.selected{background-position: -384px bottom; }
+ul#menu li.developement   span{margin-left: 45px; }
+
+ul#menu li.actualisation  a{background-position: -576px 0; }
+ul#menu li.actualisation  a:hover, 
+ul#menu li.actualisation  a.selected{background-position: -576px bottom; }
+ul#menu li.actualisation  span{margin-left: 40px; }
+
+ul#menu li.evolution      a{background-position: right 0; }
+ul#menu li.evolution      a:hover, 
+ul#menu li.evolution      a.selected{background-position: right bottom; }
+ul#menu li.evolution      span{margin-left: 35px; }
+

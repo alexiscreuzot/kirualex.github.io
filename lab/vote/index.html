@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+  <title>Vote</title>
+
+  
+
+  <link rel="stylesheet" type="text/css" href="./styles/design.css" />
+  <script src="./js/lib/jquery.js" charset="utf-8"></script>
+  
+  <script src="./js/data.js" charset="utf-8"></script>
+  <script src="./js/functions.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <div id="container">
+
+    <!-- Title -->
+    <div id="title">
+      <h1>Choisissez vos <span id="max_votes" class="blue"></span> photos préférées<br/>dans la collection ci-dessous.</h1>
+      <!--h1>parmi les <span id="nb_elem" class="blue"></span> ci-dessous</h1-->
+      <h2>Il reste <span id="nb_left" class="blue"></span> élément(s) à sélectionner.</h2>
+    </div>
+
+    <a id="alert_nb" style="display:none; position:absolute; top:900px; margin-left:250px;"> Vous devez voter pour 5 éléments </a>
+
+    <!-- Liste -->
+    <ul id="liste">
+      <!-- Thumb base -->
+      <li class="thumbnail" id="thumb_base" style="display: none;" >
+        <div class="thumb_img">
+          <img class="overlay"  src="./img/ui/overlay.png"/>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Popup details -->
+  <div id="popup_details" style="z-index:-1;">
+    <div id="details">
+      <img id="preview" />
+      <table>
+        <tr>
+          <td><a id="close_button">&nbsp;</a>​</td>
+          <td> <a id="vote_button">&nbsp;</a>​ </td>
+          <td valign='top'> <p id="desc"> Photo N, Type </p> </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <a id="next_button">&nbsp;</a>​ 
+</body>
+</html>
+
+

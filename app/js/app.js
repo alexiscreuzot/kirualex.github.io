@@ -9,23 +9,23 @@ myApp.config(function ($routeProvider,$locationProvider){
   $routeProvider
   .when('/lab',{
     controller:'LabController',
-    templateUrl:'partials/lab.html'
+    templateUrl:'app/partials/lab.html'
   })
   .when('/scribbles',{
     controller:'ScribblesController',
-    templateUrl:'partials/scribbles.html'
+    templateUrl:'app/partials/scribbles.html'
   })
   .when('/scribble/:slug',{
     controller:'ScribblesController',
-    templateUrl:'partials/scribble.html'
+    templateUrl:'app/partials/scribble.html'
   })
   .when('/contact',{
     controller:'MainController',
-    templateUrl:'partials/contact.html'
+    templateUrl:'app/partials/contact.html'
   })
   .when('/',{
     controller:'MainController',
-    templateUrl:'partials/me.html'
+    templateUrl:'app/partials/me.html'
   })
   .otherwise({redirectTo:'/'});
 });

@@ -1,0 +1,219 @@
+/** GENERAL **********************************
+************************************************/
+* {
+  margin:0;
+  padding:0;
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  -webkit-user-select: none;
+  font-family: helvetica, Arial;
+}
+
+h1{
+  font-weight : 600;
+}
+
+h2{
+  font-weight : 400;
+  padding-top : 6px;
+}
+
+/** CONTAINER **********************************
+************************************************/
+#container {
+  width: 768px;
+  height: 1004px;
+  background-image: url("../img/ui/bg.png");
+}
+
+#container ul {
+  margin: 40px auto;
+  list-style-type: none;
+}
+
+#container ul li {
+  display: inline-block;
+  vertical-align:top;
+}
+
+/*---
+* Titles
+*---------*/
+#title {
+  width: 900px;
+  margin-left: 10px;
+  padding-top: 10px;
+  text-transform : uppercase;
+}
+
+#max_votes, #nb_elem, #nb_left {
+  font-weight: 600;
+  color:#aeca04;
+}
+
+
+/** THUMBNAILS **********************************
+************************************************/
+.thumbnail {
+  margin: 0px 0px 15px 10px;
+  width: 180px;
+  height:160px;
+}
+
+.thumb_img{
+  width: 180px;
+  height:120px;
+}
+
+.thumb_img:hover{
+  opacity : 0.8;
+  margin-top:1px;
+}
+
+.thumbnail p.thumb_name {
+  text-align: center;
+  padding-top:4px;
+  font-size : 14px;
+  font-weight : bold;
+  text-transform : uppercase;
+  color:#222;
+}
+
+.thumbnail.voted p.thumb_name{
+  color:#EC7A3B;
+}
+
+.thumbnail img.overlay {
+  position: absolute;
+  display:none;
+}
+
+.thumbnail.voted img.overlay {
+  position: absolute;
+  display:block;
+}
+
+
+/** POPUP **********************************
+************************************************/
+#popup_details {
+  width: 768px;
+  height: 1004px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity:0;
+
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: opacity 0.25s ease-out;
+}
+
+#popup_details.show{
+  opacity:1;
+}
+
+/*---
+* Details
+*---------*/
+#details {
+  margin-top: -20px;
+  width: 768px;
+  height: 648px;
+  background: url("../img/ui/box.png") no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: margin-top 0.30s ease-out;
+}
+
+#details.show{
+  margin-top:20px;
+}
+
+#details  img{
+  margin:25px 0 0 24px;
+}
+
+#details table {
+  width: auto;
+  height:auto;
+  margin: 30px 20px;
+}
+
+#details table td, 
+#details table th{
+  text-align:left;
+  padding-right:10px;
+}
+
+#details p{
+  font-size : 26px;
+  margin-top:8px;
+  font-weight : bold;
+  color : #333;
+}
+
+/** BUTTONS **********************************
+************************************************/
+
+/*---
+* Vote & unvote buttons
+*---------*/
+#vote_button{
+  width: 128px;
+  height: 50px;
+  display:block;
+}
+
+#vote_button.normal{
+  background: url("../img/ui/button_vote.png") no-repeat;
+  background-position: 0 top;
+}
+
+#vote_button.voted{
+  background: url("../img/ui/button_voted.png") no-repeat;
+  background-position: 0 top;
+} 
+
+#vote_button.normal:active,#vote_button.normal:hover,
+#vote_button.voted:active,#vote_button.voted:hover{
+	background-position:0 bottom;
+}
+
+/*---
+* Close button
+*---------*/
+
+#close_button {
+  width: 102px;
+  height: 50px;
+  background: url("../img/ui/button_back.png") no-repeat;
+  background-position: 0 top;
+  display:block;
+}
+
+#close_button:active,
+#close_button:hover{
+	background-position:0 bottom;
+}
+
+/*---
+* Next button
+*---------*/
+
+#next_button {
+  width: 260px;
+  height: 70px;
+  background: url("../img/ui/button_next.png") no-repeat;
+  background-position: 0 top;
+  position:absolute;
+  margin:-75px 0 0 240px;
+}
+#next_button.active:hover{
+  background-position:0 bottom;
+}
+#next_button.active{
+  background-position:0 center;
+}

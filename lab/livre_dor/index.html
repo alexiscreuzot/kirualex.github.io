@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+        <title>Livre d'or</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <div id="page">
+            <!-- Banner -->
+            <img src="./img/banner.png" />
+            
+            <!-- Comment section -->
+            <img src="./img/title_comment.png" />
+            <textarea id="comment" placeholder="Cliquez pour écrire..."></textarea>
+            <div id="button_pen" class="bouncy"></div>
+            
+            <!-- Signature section -->
+            <img src="./img/title_sign.png" />
+            <div id="sigPad">
+                <div id="button_clear" class="hide"></div>
+                <canvas  width="500" height="300"></canvas>
+                <textarea class="output" style="display:none;"></textarea>
+                <div class="line"></div>
+            </div>
+            <div id="button_hand"></div>
+            
+            <!-- Next button -->
+            <div id="button_next" ></div>
+        </div>
+        
+        <!-- Scripts -->
+        <script src="./js/lib/jquery.min.js"></script>
+        <script src="./js/lib/json2.min.js"></script>
+        <script src="./js/lib/jquery.signaturepad.js"></script>
+        <script src="./js/functions.js"></script>
+    
+    </body>
+</html>

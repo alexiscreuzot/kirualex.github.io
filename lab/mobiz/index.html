@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<meta name="author" content="Alexis Creuzot" />
+<title>Utopia</title>
+<link rel="stylesheet" href="css/master.css" />
+<noscript>
+<link rel="stylesheet" href="css/mobile.css" />
+</noscript>
+<script>
+var ADAPT_CONFIG = {
+  path: 'css/',
+  dynamic: true,
+  range: [
+    '0px    to 960px  = mobile.css',
+    '960px  to 2500px = 960.css'
+  ]
+};
+</script>
+<script src="js/adapt.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+  window.onload = function(){  
+        $('ul#menu li a').click(function(){
+          var clicked = this;
+          $('ul#menu li a').each(function(){
+            if(this != clicked){ 
+              $(this).removeAttr('class');
+            }else{
+              $(this).attr('class','selected');
+            }
+          });
+        });
+    };
+</script>
+</head>
+<body>
+<div class="container_12">
+  <div class="grid_12">
+    <a href=""><div id="logo"></div></a>
+  </div>
+  
+  <ul id="menu">
+    <li class="conception">
+      <a href="#"><span>conception</span></a>
+    </li>
+    <li class="conseil">
+      <a href="#"><span>conseil</span></a>
+    </li>
+    <li class="developement">
+     <a href="#"><span>developement</span></a>
+    </li>
+    <li class="actualisation">
+      <a href="#"><span>actualisation</span></a>
+    </li>
+    <li class="evolution">
+      <a href="#"><span>evolution</span></a>
+    </li>
+  </ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+/** 
+* GENERAL 
+*/
+@font-face {
+    font-family: 'Nothing You Could Do';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nothing You Could Do'), local('NothingYouCouldDo'), url(../fonts/NothingYouCouldDo.woff) format('woff');
+}
+
+* {
+    margin:0;
+    padding:0;
+    -webkit-touch-callout:none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    font-family: helvetica, Arial;
+}
+
+/** 
+* Body and container definitions 
+*/
+
+body {
+    background : url('../img/bg.png') no-repeat;
+}
+
+#page{
+    width:640px;
+    height:920px;
+    margin:40px 75px;
+    text-align:center;
+}
+
+/** 
+* Banner 
+*/
+#banner {
+    display:block;
+    margin-top: 20px ;
+}
+
+/** 
+* Comment area 
+*/
+textarea#comment{
+    background:transparent;
+    border:none;
+    font-family: 'Nothing You Could Do', sans;
+    font-size:30px;
+    color:#445;
+}
+
+/** 
+* Signature area 
+*/
+#sigpad > canvas {
+
+}
+
+.line {
+    position:absolute;
+    width:200px;
+    height:1px;
+    background:#AAA;
+    margin:-150px 220px;
+}
+
+textarea#comment{
+    width:500px;
+    height:300px;
+}
+
+/** 
+* Buttons 
+*/
+#button_pen {
+    pointer-events: none;
+    background : url('../img/button_pen.png') no-repeat;
+    width : 60px;
+    height : 60px;
+    position:absolute;
+    margin: -200px 285px;
+}
+
+#button_hand {
+    pointer-events: none;
+    background : url('../img/button_hand.png') no-repeat;
+    width : 60px;
+    height : 60px;
+    position:absolute;
+    margin: -230px 285px;
+}
+
+#button_clear {
+    position :absolute;
+    width:80px;
+    height:20px;
+    padding:15px;
+    background:url('../img/button_clear.png') no-repeat;
+    background-position:center;
+    margin-left:480px;
+    display:none;
+}
+
+#button_next {
+    background : url('../img/button_next.png') no-repeat;
+    width:275px;
+    height:50px;
+    float:right;
+    margin:0 40px;
+}
+
+/** 
+* Bouncy !
+*/
+.bouncy { 
+    -webkit-animation:bounce 1.5s linear infinite; 
+} 
+
+@-webkit-keyframes bounce {
+    33%{ -webkit-transform:scale(1.1); opacity : 0.5;}
+    66%{ -webkit-transform:scale(1);  opacity : 0.75;}
+    100%{ -webkit-transform:scale(0.9); opacity : 1;}
+}
+
+/** 
+* Slidy !
+*/
+.slidy { 
+    -webkit-animation:slide 2s ease-in-out infinite; 
+} 
+
+@-webkit-keyframes slide {
+    25%{ -webkit-transform:translate(0px, 0px);}
+    40%{ -webkit-transform:translate(10px, 0px);}
+    50%{ -webkit-transform:translate(6px, 0px);}
+    60%{ -webkit-transform:translate(10px,0px);}
+    75%{ -webkit-transform:translate(0px, 0px);}
+}
+
+

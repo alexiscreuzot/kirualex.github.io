@@ -41,50 +41,54 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams, $lo
         date: "25 Jun"
     }];
 
-    // Scribble detail
-    if($routeParams.slug){
-        Graphy.startLoading(120);
-        $scope.scribble = $.grep($scope.scribbles,
-            function(s){return $scope.slug(s.title) == $routeParams.slug || s.id == $routeParams.slug ; })[0];
 
-        $http.get('scribbles/'+$scope.scribble.id+'.md').success(function(data) {
-          var dataToParse = {text:data};
-
-          $http({method: 'POST', url: 'https://api.github.com/markdown', data:angular.toJson(dataToParse), timeout:10*1000}).
-          success(function(parsedData, status, headers, config) {
-
-            var loc = $location.absUrl();
-            var title  = $scope.scribble.title;
-            var windowFeatures = 'height=450, width=550, top='+($(window).height()/2 - 225)
-            +', left='+$(window).width()/2
-            +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0';
+    var shareButtons = function(loc, title){
+        var windowFeatures = 'height=450, width=550, top='+($(window).height()/2 - 225)+', left='+$(window).width()/2
+        +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0';
 
             // Twitter
             $('a.tweet').click(function(e){
-              e.preventDefault();
-              window.open('http://twitter.com/share?url=' + escape(loc)
-                + '&text=' + escape(title) , 'twitterwindow', windowFeatures);
+              window.open('http://twitter.com/share?url=' + escape(loc)+'&text='+escape(title), 'tweetsharer', windowFeatures);
           });
 
             // Fb
             $('a.facebook').click(function(e){
-              e.preventDefault();
-              window.open('http://facebook.com/sharer.php?u=' + escape(loc), 'twitterwindow', windowFeatures);
-          });
+                window.open('http://facebook.com/sharer.php?u='+ escape(loc), 'fbsharer', windowFeatures);
+            });
+        };
 
+
+    // Scribble detail
+    if($routeParams.slug){
+        Graphy.startLoading(120);
+
+        // Find scribble
+        $scope.scribble = $.grep($scope.scribbles,
+            function(s){return $scope.slug(s.title) == $routeParams.slug || s.id == $routeParams.slug ; })[0];
+
+        // Get it's content
+        $http.get('app/scribbles/'+$scope.scribble.id+'.md').success(function(data) {
+          var dataToParse = {text:data};
+
+          // Parse it with github markdown service
+          $http({method: 'POST', url: 'https://api.github.com/markdown', data:angular.toJson(dataToParse), timeout:10*1000}).
+          success(function(parsedData, status, headers, config) {
+
+            // Inject share buttons
+            shareButtons($location.absUrl(),$scope.scribble.title);
+
+            // Inject scribble content
             $scope.scribble.content = parsedData;
-              $('.article').addClass('trigger'); // anim
-              Graphy.stopLoading();
-          }).
-error(function(data, status, headers, config) {
-    $scope.scribble.content = error_page;
+            $('.article').addClass('trigger'); // anim
+            Graphy.stopLoading();
+        }).
+          error(function(data, status, headers, config) {
+            $scope.scribble.content = error_page;
             $('.article').addClass('trigger'); // anim
             Graphy.stopLoading();
         });
-});
-}
-
-
+      });
+    }
 
     // Ready
     $scope.htmlReady();
