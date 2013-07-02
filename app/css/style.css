@@ -17,12 +17,14 @@ body {
 body{
 	font-family:'Lato', Helvetica, Arial, sans-serif;
 	color:#1c2125 ;
-	background: #ECECEC;
+	background: #F2F2F2;
 }
 
 hr{
 	border-top: none;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #BDBDBD;
+	width: 200px;
+	margin: 40px auto 30px;
 }
 
 .centered{
