@@ -84,6 +84,7 @@ myApp.controller('ScribblesController',function($scope, $http, $routeParams, $lo
         }).
           error(function(data, status, headers, config) {
             $scope.scribble.content = error_page;
+            $('.article-footer').hide();
             $('.article').addClass('trigger'); // anim
             Graphy.stopLoading();
         });
