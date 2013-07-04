@@ -34,6 +34,7 @@ hr{
 
 /* ----------  Buttons ----------- */
 
+
 .btn.btn-primary{
 	background-color: @color;
 }
@@ -45,6 +46,10 @@ hr{
 
 .btn.btn-primary:hover{
 	background-color: lighten(@color,7%);
+}
+.btn i.icon-large:before{
+	vertical-align: 10% !important;
+	line-height: 1em !important;
 }
 
 /* ----------  Typo ----------- */
