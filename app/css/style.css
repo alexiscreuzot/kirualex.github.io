@@ -278,13 +278,13 @@ ul.scribbles li a.btn:hover{
 	background: none;
 }
 
-.share{
+.sharing{
 	width: 100px;
 	background: none;
 	float : right;
 }
 
-.share a{
+.sharing a{
 	color: #AAA;
 	text-decoration: none;
 	border:none;
@@ -293,7 +293,7 @@ ul.scribbles li a.btn:hover{
 	padding: 10px;
 }
 
-.share a:hover{
+.sharing a:hover{
 	color: #333;
 	background: none;
 }
@@ -371,7 +371,7 @@ ul.scribbles li a.btn:hover{
 		padding: 0;
 	}
 
-	.share a:hover{
+	.sharing a:hover{
 		color: #EEE;
 		background: none;
 	}
