@@ -1,3 +1,13 @@
+//
+// Parralax effect
+$(document).ready(function(){
+  var factor = 1.6;
+  var img= $('#header');
+  $(window).scroll(function() {
+    var yPos = ($(window).scrollTop() / factor);
+    img.css({ backgroundPosition: '50% '+ yPos + 'px' });
+  });
+});
 
 //
 // Analytics
@@ -6,9 +16,9 @@ _gaq.push(['_setAccount', 'UA-41264154-1']);
 _gaq.push(['_trackPageview']);
 
 (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
 
@@ -38,29 +48,29 @@ var Graphy = (function() {
     var   x = 0;
 
     for (var i = 0; i < length; i++) {
-        curY = Math.round(Math.random() * (h-padding));
-        if(i==0){
-            path = "M"+0+","+curY;
-        }else{
-            x += Math.round(w/length);
-            path += "," + [x, curY];
-        }
+      curY = Math.round(Math.random() * (h-padding));
+      if(i==0){
+        path = "M"+0+","+curY;
+      }else{
+        x += Math.round(w/length);
+        path += "," + [x, curY];
+      }
     }
     return path;
   }
 
   function animation(time) {
-        var anim = Raphael.animation({path: randomPath()}, time, "linear");
-        bg.animate(anim);
-    }
+    var anim = Raphael.animation({path: randomPath()}, time, "linear");
+    bg.animate(anim);
+  }
 
-return {
+  return {
     animate :function (time) {
-        animation(time);
+      animation(time);
     },startLoading : function(time){
-        refreshIntervalId = setInterval(function(){animation(time)}, time+5);
+      refreshIntervalId = setInterval(function(){animation(time)}, time+5);
     },stopLoading : function(){
-        clearInterval(refreshIntervalId);
+      clearInterval(refreshIntervalId);
     },init : function(){
         // First draw
         bg.attr({path: randomPath(),stroke:getLessVar('myColor', 'color'), opacity: 1, fill:"none"});
@@ -73,10 +83,10 @@ return {
          function () {
            Graphy.stopLoading();
          }
-     );
-    }
-};
-})();
+         );
+      }
+    };
+  })();
 
 
-Graphy.init();
+  Graphy.init();
