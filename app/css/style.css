@@ -136,6 +136,7 @@ a.back{
 	padding:8px 6px 2px 4px;
 	left:15px;
 }
+
 /* ----------  Misc ----------- */
 
 .avatar {
@@ -273,6 +274,7 @@ ul.scribbles li a.btn:hover{
 /* Scribble content */
 
 .article-footer{
+	padding-top: 20px;
 	background: none;
 }
 
@@ -301,9 +303,15 @@ ul.scribbles li a.btn:hover{
 
 #footer{
 	width:100%;
-	height:100px;
+	height:60px;
 	position:absolute;
 	bottom: 0;
+}
+
+#holder{
+	width:150px;
+	height:25px; 
+	margin:25px auto 10px;
 }
 
 /* ------------------- Mobile CSS ------------------------*/
@@ -348,6 +356,11 @@ ul.scribbles li a.btn:hover{
 		display: none;
 	}
 
+	#main{
+		padding-bottom: 50px;
+
+	}
+
 	#main .container{
 		padding:60px 10px 30px;
 	}
@@ -356,6 +369,11 @@ ul.scribbles li a.btn:hover{
 		width: auto;
 		margin:auto;
 		padding: 0;
+	}
+
+	.share a:hover{
+		color: #EEE;
+		background: none;
 	}
 
 	/* Menu */
