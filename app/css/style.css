@@ -108,8 +108,8 @@ blockquote{
 blockquote p:before {
 	content: open-quote;
 	font-weight: bold;
-	font-size: 3em;
-	vertical-align:-.2em;
+	font-size: 2em;
+	line-height: 1em;
 	margin-right: 10px;
 }
 
