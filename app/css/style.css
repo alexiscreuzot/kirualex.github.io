@@ -202,7 +202,7 @@ a.back{
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
-	padding: 40px;
+	padding: 50px 0;
 }
 
 #header .btn-toolbar a.btn{
@@ -315,7 +315,7 @@ ul.scribbles li a.btn:hover{
 
 #holder{
 	width:150px;
-	height:25px; 
+	height:25px;
 	margin:25px auto 10px;
 }
 

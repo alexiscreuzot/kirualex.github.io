@@ -1,11 +1,15 @@
 //
 // Parralax effect
 $(document).ready(function(){
-  var factor = 1.6;
-  var img= $('#header');
+  var factor = 1.4;
+  var header= $('#header');
+  var menu=$('#header .btn-toolbar');
   $(window).scroll(function() {
     var yPos = ($(window).scrollTop() / factor);
-    img.css({ backgroundPosition: '50% '+ yPos + 'px' });
+    header.css({ backgroundPosition: '50% '+ yPos + 'px' });
+    if(header.width() >  480){
+      menu.css({opacity:(100-yPos)/100});
+    }
   });
 });
 
