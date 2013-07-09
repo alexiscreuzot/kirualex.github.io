@@ -1,11 +1,26 @@
 {
     "ads":false,
-    "current_version":"1.0",
+    "app_version":"1.1",
     "apps":[
     {
         "appId":"com.alexiscreuzot.sevenmw",
+        "order":1,
         "icon":"http://i.imgur.com/xNXPvj6.png",
         "title":"7 Minutes Workout",
+        "description":"Keep in shape by working out efficiently with the scientifically approved 7 Minute Workout !",
+        "link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8"
+    },{
+        "appId":"com.alexiscreuzot.sevenmw",
+        "order":3,
+        "icon":"http://i.imgur.com/xNXPvj6.png",
+        "title":"Third",
+        "description":"Keep in shape by working out efficiently with the scientifically approved 7 Minute Workout !",
+        "link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8"
+    },{
+        "appId":"com.alexiscreuzot.sevenmw",
+        "order":2,
+        "icon":"http://i.imgur.com/xNXPvj6.png",
+        "title":"Second",
         "description":"Keep in shape by working out efficiently with the scientifically approved 7 Minute Workout !",
         "link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8"
     }
