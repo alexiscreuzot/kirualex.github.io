@@ -179,8 +179,8 @@ a.back{
 /* Header */
 
 #header{
-	background: url("../images/blur.jpg") #242222;
-	background-position: 50% -150px;
+	background: url("../images/shattered.png") #242222;
+	background-position: 50% 0px;
 }
 
 
@@ -203,7 +203,7 @@ a.back{
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
-	padding: 70px 0;
+	padding: 60px 0;
 }
 
 #header .btn-toolbar a.btn{
