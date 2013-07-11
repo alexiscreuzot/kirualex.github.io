@@ -4,11 +4,14 @@ $(document).ready(function(){
   var factor = 1.4;
   var header= $('#header');
   var menu=$('#header .btn-toolbar');
+  var backgroundPos = $(header).css('backgroundPosition').split(" ");
+  var yOffset = parseFloat(backgroundPos[1].replace(/[^0-9-]/g, ''));
+  console.log(yOffset);
   $(window).scroll(function() {
-    var yPos = ($(window).scrollTop() / factor);
+    var yPos = ($(window).scrollTop() / factor) + yOffset;
     header.css({ backgroundPosition: '50% '+ yPos + 'px' });
     if(header.width() >  480){
-      menu.css({opacity:(100-yPos)/100});
+      menu.css({opacity:((yOffset+110)-yPos)/100});
     }
   });
 });

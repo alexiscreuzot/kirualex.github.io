@@ -179,8 +179,12 @@ a.back{
 /* Header */
 
 #header{
-	background: url("../images/shattered.png") #242222;
-	background-position: 50% 0pc;
+	background: url("../images/mav.jpg") #242222;
+	background-position: 50% -650px;
+}
+
+#header .btn-toolbar .btn-group{
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); 
 }
 
 #logo{
@@ -202,7 +206,7 @@ a.back{
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
-	padding: 50px 0;
+	padding: 75px 0;
 }
 
 #header .btn-toolbar a.btn{
@@ -394,6 +398,10 @@ ul.scribbles li a.btn:hover{
 	#header .btn-toolbar .btn-group{
 		width:213px;
 		margin:0 auto;
+	}
+
+	#header .btn-toolbar .btn-group{
+		box-shadow: none; 
 	}
 
 	.btn-group > .btn:first-of-type,
