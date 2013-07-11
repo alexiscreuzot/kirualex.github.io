@@ -179,13 +179,10 @@ a.back{
 /* Header */
 
 #header{
-	background: url("../images/mav.jpg") #242222;
-	background-position: 50% -650px;
+	background: url("../images/blur.jpg") #242222;
+	background-position: 50% -150px;
 }
 
-#header .btn-toolbar .btn-group{
-	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); 
-}
 
 #logo{
 	position: absolute;
@@ -206,7 +203,7 @@ a.back{
 #header .btn-toolbar{
 	width:213px;
 	margin:0 auto;
-	padding: 75px 0;
+	padding: 70px 0;
 }
 
 #header .btn-toolbar a.btn{
@@ -400,9 +397,6 @@ ul.scribbles li a.btn:hover{
 		margin:0 auto;
 	}
 
-	#header .btn-toolbar .btn-group{
-		box-shadow: none; 
-	}
 
 	.btn-group > .btn:first-of-type,
 	.btn-group > .btn:last-of-type {
