@@ -1,0 +1,14 @@
+{
+    "app_version":"2.3",
+    "app_link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8",
+    "apps":[
+    {
+        "appId":"com.alexiscreuzot.reddito",
+        "order":1,
+        "icon":"http://i.imgur.com/PzI3QWY.png",
+        "title":"Reddito",
+        "description":"Get your fix of funny images for with Reditto !",
+        "link":"http://itunes.apple.com/app/reddito/id674736514?ls=1&mt=8",
+    }
+    ]
+}
