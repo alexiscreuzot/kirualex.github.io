@@ -10,7 +10,7 @@ myApp.controller('LabController',function($scope, $http, $routeParams){
         content:
         [{
             name:"7 minute Workout",
-            url:"https://itunes.apple.com/app/7-minutes-workout/id650627810?&ls=1&mt=8",
+            url:"http://alexiscreuzot.com/apps/7-minutes-workout",
             description:"The perfect assistant to get in shape using the scientific 7-minute Workout, directly on your iPhone"
         }]
     },{
