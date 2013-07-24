@@ -12,7 +12,8 @@ myApp.controller('MainController',function($scope, $http, $routeParams){
         hn:"https://news.ycombinator.com/user?id=kirualex",
         grooveshark:"http://grooveshark.com/#!/kirualex",
         osrc:"http://osrc.dfm.io/kirualex",
-        isAvailable:false
+        twitter:"http://twitter.com/kirualex",
+        isAvailable:true
     };
 
     var image = $('.avatar img').attr('src', $scope.perso.gravatar);
