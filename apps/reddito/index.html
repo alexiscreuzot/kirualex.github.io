@@ -1,156 +1,134 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" ng-controller="AppController">
-<head>
-  <title>Reddito</title>
-
-  <!-- Metas -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta content="Reddito" property="og:title" />
-  <meta content="images/icon.png" property="og:image" />
-
-  <!-- Icons -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
-  <link rel="apple-touch-startup-image" href="images/default.png" />
-
-  <!-- Stylesheet -->
-  <link href="css/libs/bootstrap.css" rel='stylesheet' type='text/css'>
-  <link href="css/libs/font-awesome.min.css" rel="stylesheet">
-  <link href="css/libs/jquery.share.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-
-</head>
-
-<body>
-  <div id="topline">
-
-   <div class="container">
-
-    <div class="row">
-      <div id="icon" class="span2"></div>
-      <img src="images/title.png" style="padding:10px 30px;"/>
-    </div>
-  </div>
-</div>
-
-<div id="header">
-  <div class="container">
-
-    <div class="row">
-      <div class="span6 iphone">
-        <div id="slides">
-          <img src="images/slides/1.png"/>
-          <img src="images/slides/2.png"/>
-          <img src="images/slides/3.png"/>
-          <img src="images/slides/4.png"/>
-          <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-          <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+  <head>
+    <title>Reddito</title>
+    <!-- Metas -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Reddito" property="og:title" />
+    <meta content="images/icon.png" property="og:image" />
+    <meta name="description" content="Ban boredom by getting your daily fix of fun with Reddito!" />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+    <link rel="apple-touch-startup-image" href="images/default.png" />
+    <!-- Stylesheet -->
+    <link href="css/libs/bootstrap.css" rel='stylesheet' type='text/css'>
+    <link href="css/libs/font-awesome.min.css" rel="stylesheet">
+    <link href="css/libs/jquery.share.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="body-wrapper"><!-- for sticky footer. contains everything but sticky footer -->
+        <div id="header">
+         <div class="container">
+          <div class="row">
+            <div id="icon" class="span2"></div>
+            <img src="images/title.png" style="padding:10px 30px;"/>
+          </div>
         </div>
       </div>
+      <div id="main-app-area">
+        <div class="container">
+          <div class="row">
+            <div class="span6 iphone">
+              <div id="slides">
+                <img src="images/slides/1.png"/>
+                <img src="images/slides/2.png"/>
+                <img src="images/slides/3.png"/>
+                <img src="images/slides/4.png"/>
+                <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+              </div>
+            </div>
 
-      <div class="span6 details">
+            <div class="span6 details">
 
-        <div class="row">
-          <div class="span1"><br/><p class="centered"><i class="icon-question-sign icon-large"></i></p></div>
-          <div class="span5"><p>
-            Ban boredom by getting your daily fix of fun with <b>Reddito</b>!<br/>
-            This app was crafted specifically to allow <b>fluid browsing</b> of reddit images, but also to <b>save and share</b> them in an instant !
-            <br/><br/>
-            Oh, and <b>it's free</b>!
-          </p>
+              <div class="row">
+                <div class="span1"><br/><p class="centered"><i class="icon-question-sign icon-large"></i></p></div>
+                <div class="span5"><p>
+                  Ban boredom by getting your daily fix of fun with <b>Reddito</b>!<br/>
+                  This app was crafted specifically to allow <b>fluid browsing</b> of reddit images, but also to <b>save and share</b> them in an instant !
+                  <br/><br/>
+                  Oh, and <b>it's free</b>!
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="span1"><br/><p class="centered"><i class="icon-comment icon-large"></i></p></div>
+              <div class="span5"><p>
+                <blockquote>
+                  <b>★★★★★ Delicious</b>
+                  <br/>Everything in the app is easy to find and easy to use
+                  <small>Agiusmage, 25 Jul 2013</small>
+                </blockquote>
+                <blockquote>
+                  <b>★★★★★ Great app, very easy to use</b>
+                  <br/>Fantastic interface, great app
+                  <small>Realistic!, 26 Jul 2013</small>
+                </blockquote>
+              </p></div>
+            </div>
+            <hr>
+            <p id="itunes-link" class="centered">
+              <a href="https://itunes.apple.com/app/reddito/id674736514?mt=8&uo=4" target="itunes_store"><img src="http://r.mzstatic.com/images/web/linkmaker/badge_appstore-lrg.gif" alt="Reddito - Alexis Creuzot" style="border: 0;"/></a>
+              <br/><br/>
+              <div id="sharing" class="centered"></div>
+            </p>
+          </div>
         </div>
       </div>
-
-
-      <!--div class="row">
-        <div class="span1"><br/><p class="centered"><i class="icon-trophy icon-large"></i></p></div>
-        <div class="span5"><p>
-          <b>#1</b> Top free Apps<br/>
-          <b>#1</b> Top free Apps category <b>Health &amp; Fitness</b>
-        </p></div>
-      </div-->
-
-      <div class="row">
-        <div class="span1"><br/><p class="centered"><i class="icon-comment icon-large"></i></p></div>
-        <div class="span5"><p>
-          <blockquote>
-            <b>★★★★★ Delicious</b>
-            <br/>Everything in the app is easy to find and easy to use
-            <small>Agiusmage, 25 Jul 2013</small>
-          </blockquote>
-          <blockquote>
-            <b>★★★★★ Great app, very easy to use</b>
-            <br/>Fantastic interface, great app
-            <small>Realistic!, 26 Jul 2013</small>
-          </blockquote>
-        </p></div>
       </div>
-
-      <hr/>
-
-      <p class="centered">
-        <a href="https://itunes.apple.com/app/reddito/id674736514?mt=8&uo=4" target="itunes_store"><img src="http://r.mzstatic.com/images/web/linkmaker/badge_appstore-lrg.gif" alt="Reddito - Alexis Creuzot" style="border: 0;"/></a>
-        <br/><br/>
-        <div id="sharing" class="centered"></div>
-      </p>
+      <div id="features">
+        <div class="container">
+          <div class="row">
+            <div class="span4">
+              <h2><i class="icon-eye-open icon-large"></i> Browse</h2>
+              <p>One page, and you can scroll to infinity and beyond. Click on an image to see it full-size, click again to resume your browsing. Easy as cake!</p>
+            </div>
+            <div class="span4">
+              <h2><i class="icon-list icon-large"></i> Navigate</h2>
+              <p>A clear and beautiful menu to navigate. You can even add items for your favorite subreddits!</p>
+            </div>
+            <div class="span4">
+              <h2><i class="icon-share icon-large"></i> Save &amp; Share</h2>
+              <p>One click on <i class="icon-star"></i> and the image become accessible forever through the "Saved" menu. Click on <i class="icon-share-alt"></i> to share it via Twitter, Facebook, Mail, Messages or to save it to your personnal library.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sticky-footer-push"></div>
     </div>
-  </div>
-</div>
-</div>
-
-<div id="main">
-  <div class="container">
-
-    <div class="row">
-      <div class="span4">
-        <h2><i class="icon-eye-open icon-large"></i> Browse</h2>
-        <p>One page, and you can scroll to infinity and beyond. Click on an image to see it full-size, click again to resume your browsing. Easy as cake !</p>
-      </div>
-      <div class="span4">
-        <h2><i class="icon-list icon-large"></i> Navigate</h2>
-        <p>A clear and beautiful menu to navigate. You can even add items for your favorite subreddits !</p>
-      </div>
-      <div class="span4">
-        <h2><i class="icon-share icon-large"></i> Save &amp; Share</h2>
-        <p>One click on <i class="icon-star"></i> and the image become accessible forever through the "Saved" menu. Click on <i class="icon-share-alt"></i> to share it via Twitter, Facebook, Mail, Messages or to save it to your personnal library.</p>
+    <div id="footer">
+      <div class="container centered">
+        <small>An App by <a href="http://alexiscreuzot.com">Alexis Creuzot</a></small>
       </div>
     </div>
 
-  </div>
-</div>
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/libs/jquery.slides.min.js"></script>
+    <script src="js/libs/jquery.share.js"></script>
 
-<div id="footer">
-  <div class="container centered">
-    <small>An App by <a href="http://alexiscreuzot.com">Alexis Creuzot</a></small>
-  </div>
-</div>
+    <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 300,
+        height: 544,
+        navigation: false,
+        play: {
+          active: false,
+          auto: true,
+          interval: 4000,
+          pauseOnHover: true
+        }
+      });
 
-<!-- Scripts -->
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="js/libs/jquery.slides.min.js"></script>
-<script src="js/libs/jquery.share.js"></script>
+      // Sharing
+      $('#sharing').share({
+        networks: ['facebook','twitter','email','googleplus','digg']
+      });
 
-<script>
-$(function() {
-  $('#slides').slidesjs({
-    width: 300,
-    height: 544,
-    navigation: false,
-    play: {
-      active: false,
-      auto: true,
-      interval: 4000,
-      pauseOnHover: true
-    }
-  });
-
-  // Sharing
-  $('#sharing').share({
-    networks: ['facebook','twitter','email','googleplus','digg']
-  });
-
-});
-</script>
-
-</body>
+    });
+    </script>
+  </body>
 </html>
