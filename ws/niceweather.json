@@ -1,0 +1,32 @@
+{
+    "ads":1,
+    "app_version":"1.90",
+    "app_link":"http://itunes.apple.com/app/",
+    "magic_bean":"THXALEX",
+    "apps":[
+    {
+        "appId": "com.alexiscreuzot.niceweather2",
+        "order": 2,
+        "icon": "http://i.imgur.com/kUR1VZL.png",
+        "title": "Nice Weather 2",
+        "description": "Nice Weather app sequel, with its all new killer design !",
+        "link": "http://itunes.apple.com/app/nice-weather-2/id729430189?ls=1&mt=8"
+    },
+    {
+        "appId":"com.alexiscreuzot.reddito",
+        "order":3,
+        "icon":"http://i.imgur.com/PzI3QWY.png",
+        "title":"Reddito",
+        "description":"Take your daily fix of fun with Reddito! ",
+        "link":"http://itunes.apple.com/app/reddito/id674736514?ls=1&mt=8"
+    },
+    {
+        "appId":"com.alexiscreuzot.sevenmw",
+        "order":4,
+        "icon":"http://i.imgur.com/xNXPvj6.png",
+        "title":"7 Minutes Workout",
+        "description":"Keep in shape by working out efficiently with the scientifically approved 7 Minute Workout !",
+        "link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8"
+    }
+    ]
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Nice Weather 2</title>
+    <!-- Metas -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta content="Nice Weather 2" property="og:title" />
+    <meta content="images/icon.png" property="og:image" />
+    <meta name="description" content="The Weather, simply" />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+    <link rel="apple-touch-startup-image" href="images/default.png" />
+
+    <!-- Stylesheet -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
+    <link href="css/libs/bootstrap.css" rel='stylesheet' type='text/css'>
+    <link href="css/libs/font-awesome.min.css" rel="stylesheet">
+    <link href="css/libs/jquery.share.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="body-wrapper"><!-- for sticky footer. contains everything but sticky footer -->
+        <div id="header">
+         <div class="container">
+          <div class="row">
+          <div class="span1"><img class="icon" src="images/icon.png"/></div>
+
+             <h1>&nbsp;&nbsp;Nice Weather 2</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="main-app-area">
+        <div class="container">
+          <div class="row">
+            <div class="span6 iphone">
+              <div id="slides">
+                <img src="images/slides/1.png"/>
+                <img src="images/slides/2.png"/>
+                <img src="images/slides/3.png"/>
+                <img src="images/slides/4.png"/>
+                <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+              </div>
+            </div>
+
+            <div class="span6 details">
+
+              <div class="row">
+                <div class="span1"><br/><p class="centered"><i class="icon-question-sign icon-large"></i></p></div>
+                <div class="span5"><p>
+                  The Weather, simply<br/>
+                  Nice Weather was designed with simplicity in mind and aim to provide a clean and simple user experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="span1"><br/><p class="centered"><i class="icon-trophy icon-large"></i></p></div>
+            <div class="span5"><p>
+              <b>Top 10</b> Free Apps<br/>
+              <b>#1</b> "What's hot" in Weather category
+            </p></div>
+          </div>
+
+            <div class="row">
+            <div class="span1"><br/><p class="centered"><i class="icon-comment icon-large"></i></p></div>
+            <div class="span5"><p>
+              <blockquote>
+                <b>★★★★★ Nice and beatutiful</b>
+                <br/>Remarkable UI and UX. Best Weather apps ever!
+                <small>|Abram|, 24 Oct 2013</small>
+              </blockquote>
+              <blockquote>
+                <b>★★★★☆ Beautiful</b>
+                <br/>If this app continues to work well it will be my all time favorite. Wish I could put it on my lock screen!
+                <small>Grohlier , 24 Oct 2013</small>
+              </blockquote>
+            </p></div>
+          </div>
+
+            <hr>
+
+            <p id="itunes-link" class="centered">
+              <a href="https://itunes.apple.com/us/app/nice-weather-2/id729430189?mt=8&uo=4" target="itunes_store"style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
+              <br/><br/>
+              <div id="sharing" class="centered"></div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+      <div id="features">
+        <div class="container">
+          <div class="row">
+            <div class="span4">
+              <h2>Beautiful design</h2>
+              <p>Clean. Without clutter. Carefully thought to the last pixel. Nice Weather 2 will quickly become your go-to weather App!</p>
+            </div>
+            <div class="span4">
+              <h2>A feel for the day</h2>
+              <p>Have a feel for the day in a blink of an eye. Get a specific hour forecast by just sliding your finger on the bottom graph, it's that easy !</p>
+            </div>
+            <div class="span4">
+              <h2>Awesome features</h2>
+              <p>Add cities forecast in no time. Customize the display with ease. You can even use those silly imperial units if that's what you're into! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sticky-footer-push"></div>
+    </div>
+    <div id="footer">
+      <div class="container centered">
+        <small>An App by <a href="http://alexiscreuzot.com">Alexis Creuzot</a></small> - <small><a href="privacy.html">Privacy Policy</a></small>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/libs/jquery.slides.min.js"></script>
+    <script src="js/libs/jquery.share.js"></script>
+
+    <script>
+    $(function() {
+
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     // some code..
+     $('#slides').slidesjs({
+        width: 242,
+        height: 440,
+        navigation: false,
+        play: {
+          active: false,
+          auto: false
+        }
+      });
+    }else{
+      $('#slides').slidesjs({
+        width: 242,
+        height: 440,
+        navigation: false,
+        play: {
+          active: false,
+          auto: true,
+          interval: 4000,
+          pauseOnHover: true
+        }
+      });
+    }
+      // Sharing
+      $('#sharing').share({
+        networks: ['facebook','twitter']
+      });
+
+    });
+    </script>
+  </body>
+</html>
