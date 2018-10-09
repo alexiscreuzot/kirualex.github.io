@@ -4,20 +4,12 @@
     "magic_bean":"THXALEX",
     "apps":[
     {
-        "appId": "com.alexiscreuzot.niceweather2",
-        "order": 1,
-        "icon": "http://i.imgur.com/kUR1VZL.png",
-        "title": "Nice Weather 2",
-        "description": "Nice Weather app sequel, with its all new killer design !",
-        "link": "http://itunes.apple.com/app/nice-weather-2/id729430189?ls=1&mt=8"
-    },
-    {
-        "appId":"com.alexiscreuzot.reddito",
-        "order":2,
-        "icon":"http://i.imgur.com/PzI3QWY.png",
-        "title":"Reddito",
-        "description":"Profitez d'une bonne dose de fun avec Reddito ! L'essayer c'est l'adopter :)",
-        "link":"http://itunes.apple.com/app/reddito/id674736514?ls=1&mt=8",
+        "appId":"fr.monoqle.looq",
+        "order":1,
+        "icon":"https://i.imgur.com/I2Rk1y4.png",
+        "title":"Looq",
+        "description":"Create captivating artworks with Artificial Intelligence powered filters",
+        "link":"https://itunes.apple.com/us/app/looq-ai-powered-filters/id1159704664?mt=8"
     }
     ]
 }
