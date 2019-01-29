@@ -5,12 +5,20 @@
     "magic_bean":"THXALEX",
     "apps":[
     {
-        "appId":"fr.monoqle.looq",
+        "appId":"com.alexiscreuzot.reddito",
+        "order":2,
+        "icon":"http://i.imgur.com/PzI3QWY.png",
+        "title":"Reddito",
+        "description":"Take your daily fix of fun with Reddito! ",
+        "link":"http://itunes.apple.com/app/reddito/id674736514?ls=1&mt=8"
+    },
+    {
+        "appId":"com.alexiscreuzot.sevenmw",
         "order":1,
-        "icon":"https://i.imgur.com/I2Rk1y4.png",
-        "title":"Looq",
-        "description":"Create captivating artworks with Artificial Intelligence powered filters",
-        "link":"https://itunes.apple.com/us/app/looq-ai-powered-filters/id1159704664?mt=8"
+        "icon":"http://i.imgur.com/xNXPvj6.png",
+        "title":"7 Minutes Workout",
+        "description":"Keep in shape by working out efficiently with the scientifically approved 7 Minute Workout !",
+        "link":"http://itunes.apple.com/app/7-minutes-workout/id650627810?ls=1&mt=8"
     }
     ]
 }
